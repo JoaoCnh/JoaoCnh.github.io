@@ -107,7 +107,9 @@ a {
 
 @media only screen and (min-width: 1100px) {
   .jmc-rune.one-third {
-    width: 33.33333333%; } }
+    width: 33.33333333%; }
+  .jmc-rune.two-thirds {
+    width: 66.66666667%; } }
 
 @media only screen and (min-width: 1100px) {
   .jmc-rune h2, .jmc-rune p {
@@ -167,3 +169,12 @@ i.jmc-rune-icon {
     content: "";
     float: left;
     margin-top: 100%; }
+
+.jmc-google-map {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+  height: 100%; }
