@@ -40800,7 +40800,7 @@
 	        _react2.default.createElement(
 	          "h2",
 	          null,
-	          "WHAT CAN I DO"
+	          "WHAT I CAN DO"
 	        ),
 	        _react2.default.createElement(
 	          "div",
