@@ -70,7 +70,15 @@
 
 	var _App2 = _interopRequireDefault(_App);
 
-	var _Travolta = __webpack_require__(575);
+	var _Panel = __webpack_require__(575);
+
+	var _Panel2 = _interopRequireDefault(_Panel);
+
+	var _About = __webpack_require__(580);
+
+	var _About2 = _interopRequireDefault(_About);
+
+	var _Travolta = __webpack_require__(581);
 
 	var _Travolta2 = _interopRequireDefault(_Travolta);
 
@@ -79,7 +87,17 @@
 	(0, _reactDom.render)(_react2.default.createElement(
 	  _reactRouter.Router,
 	  { history: _reactRouter.hashHistory },
-	  _react2.default.createElement(_reactRouter.Route, { path: '/', component: _App2.default }),
+	  _react2.default.createElement(
+	    _reactRouter.Route,
+	    { path: '/', component: _App2.default },
+	    _react2.default.createElement(_reactRouter.Route, { path: 'about', component: function component() {
+	        return _react2.default.createElement(
+	          _Panel2.default,
+	          { compKey: 'about', title: 'ABOUT ME', imgSrc: 'about', color: '#117899' },
+	          _react2.default.createElement(_About2.default, null)
+	        );
+	      } })
+	  ),
 	  _react2.default.createElement(_reactRouter.Route, { path: '*', component: _Travolta2.default })
 	), document.getElementById('content'));
 
@@ -27128,14 +27146,16 @@
 
 	var intro_phrases = ["I love programming", "It's not a bug... It's an undocumented feature", "Coffee is my coding fuel", "In order to understand recursion, one must first understand recursion."];
 
-	exports.default = _react2.default.createClass({
+	var App = _react2.default.createClass({
 	  displayName: 'App',
 
 	  getInitialState: function getInitialState() {
 	    return {
 	      isLoading: true,
 	      loadingPhrase: intro_phrases[Math.floor(Math.random() * intro_phrases.length)],
-	      doneLoading: false
+	      doneLoading: false,
+
+	      isPanelOpen: false
 	    };
 	  },
 	  hideLoader: function hideLoader() {
@@ -27144,16 +27164,45 @@
 	      doneLoading: true
 	    });
 	  },
+	  // passes the information down to its children
+	  getChildContext: function getChildContext() {
+	    return { togglePanel: this.togglePanel };
+	  },
+	  togglePanel: function togglePanel() {
+	    this.setState({
+	      isPanelOpen: !this.state.isPanelOpen
+	    });
+	  },
 	  render: function render() {
+	    var _this = this;
+
+	    var childrenWithProps = _react2.default.Children.map(this.props.children, function (child) {
+	      return _react2.default.cloneElement(child, {
+	        togglePanel: _this.togglePanel
+	      });
+	    });
+
 	    return _react2.default.createElement(
 	      'div',
 	      null,
 	      _react2.default.createElement(_Loader2.default, { isLoading: this.state.isLoading, loadingPhrase: this.state.loadingPhrase,
 	        doneLoading: this.state.doneLoading, hideLoader: this.hideLoader }),
-	      _react2.default.createElement(_Main2.default, null)
+	      _react2.default.createElement(_Main2.default, { shouldMoveLeft: this.state.isPanelOpen }),
+	      _react2.default.createElement(
+	        'div',
+	        { id: 'jmc-panels' },
+	        childrenWithProps
+	      )
 	    );
 	  }
 	});
+
+	// make information available to its children
+	App.childContextTypes = {
+	  togglePanel: _react2.default.PropTypes.func
+	};
+
+	exports.default = App;
 
 /***/ },
 /* 237 */
@@ -27225,9 +27274,10 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
+	      var className = '' + (this.props.shouldMoveLeft ? 'move-left' : 'move-right');
 	      return _react2.default.createElement(
 	        'div',
-	        { id: 'jmc-main' },
+	        { id: 'jmc-main', className: className },
 	        _react2.default.createElement(_Header2.default, { handleScrollToRunes: this._scrollToRunes.bind(this) }),
 	        _react2.default.createElement(_Runes2.default, { ref: 'runes' }),
 	        _react2.default.createElement(_Footer2.default, { handleScrollToTop: this._scrollToTop.bind(this) })
@@ -28161,7 +28211,8 @@
 
 	  _createClass(Header, [{
 	    key: '_callHandle',
-	    value: function _callHandle() {
+	    value: function _callHandle(event) {
+	      event.preventDefault();
 	      this.props.handleScrollToRunes(_reactDom2.default.findDOMNode(this.refs.scrollDown));
 	    }
 	  }, {
@@ -28379,14 +28430,14 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { id: 'jmc-runes' },
-	        _react2.default.createElement(_Rune2.default, { key: 'about', title: 'About Me',
-	          text: 'Get to know me', bgColor: '#1F2041', icon: 'user' }),
-	        _react2.default.createElement(_Rune2.default, { key: 'resume', title: 'Resume',
-	          text: 'My business experience and education', bgColor: '#422040', icon: 'graduation-cap' }),
-	        _react2.default.createElement(_Rune2.default, { key: 'portfolio', title: 'Portfolio',
-	          text: 'My project portfolio', bgColor: '#2E4057', icon: 'briefcase' }),
-	        _react2.default.createElement(_Rune2.default, { key: 'contact', title: 'Contact',
-	          text: 'Feel free to get in touch', bgColor: '#782347', icon: 'send' }),
+	        _react2.default.createElement(_Rune2.default, { key: 'about', route: '/about', title: 'About Me',
+	          text: 'Get to know me', bgColor: '#117899', icon: 'user' }),
+	        _react2.default.createElement(_Rune2.default, { key: 'resume', route: '/resume', title: 'Resume',
+	          text: 'My business experience and education', bgColor: '#A3B869', icon: 'graduation-cap' }),
+	        _react2.default.createElement(_Rune2.default, { key: 'portfolio', route: '/portfolio', title: 'Portfolio',
+	          text: 'My project portfolio', bgColor: '#F16C21', icon: 'briefcase' }),
+	        _react2.default.createElement(_Rune2.default, { key: 'contact', route: '/contact', title: 'Contact',
+	          text: 'Feel free to get in touch', bgColor: '#EEC640', icon: 'send' }),
 	        _react2.default.createElement(_MapRune2.default, null)
 	      );
 	    }
@@ -28401,7 +28452,7 @@
 /* 254 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -28412,6 +28463,8 @@
 	var _react = __webpack_require__(2);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(173);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28431,39 +28484,39 @@
 	  }
 
 	  _createClass(Rune, [{
-	    key: "render",
+	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        "div",
-	        { className: "jmc-rune one-third", style: { backgroundColor: this.props.bgColor } },
+	        'div',
+	        { className: 'jmc-rune one-third', style: { backgroundColor: this.props.bgColor } },
 	        _react2.default.createElement(
-	          "a",
-	          { href: "#about", className: "jmc-panel-open" },
+	          _reactRouter.Link,
+	          { to: this.props.route, className: 'jmc-panel-open' },
 	          _react2.default.createElement(
-	            "div",
-	            { className: "jmc-rune-content" },
+	            'div',
+	            { className: 'jmc-rune-content' },
 	            _react2.default.createElement(
-	              "h2",
+	              'h2',
 	              null,
 	              this.props.title.toUpperCase()
 	            ),
 	            _react2.default.createElement(
-	              "p",
+	              'p',
 	              null,
 	              this.props.text
 	            ),
 	            _react2.default.createElement(
-	              "strong",
+	              'strong',
 	              null,
-	              "VIEW MORE"
+	              'VIEW MORE'
 	            ),
-	            _react2.default.createElement("i", { className: "fa fa-" + this.props.icon + " jmc-rune-icon" }),
+	            _react2.default.createElement('i', { className: 'fa fa-' + this.props.icon + ' jmc-rune-icon' }),
 	            _react2.default.createElement(
-	              "div",
-	              { className: "jmc-rotated-text" },
+	              'div',
+	              { className: 'jmc-rotated-text' },
 	              _react2.default.createElement(
-	                "span",
-	                { className: "jmc-rotated-text-inner" },
+	                'span',
+	                { className: 'jmc-rotated-text-inner' },
 	                this.props.title.toUpperCase()
 	              )
 	            )
@@ -40280,6 +40333,540 @@
 
 /***/ },
 /* 575 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(35);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	var _PanelClose = __webpack_require__(576);
+
+	var _PanelClose2 = _interopRequireDefault(_PanelClose);
+
+	var _PanelUp = __webpack_require__(577);
+
+	var _PanelUp2 = _interopRequireDefault(_PanelUp);
+
+	var _PanelText = __webpack_require__(578);
+
+	var _PanelText2 = _interopRequireDefault(_PanelText);
+
+	var _PanelIMG = __webpack_require__(579);
+
+	var _PanelIMG2 = _interopRequireDefault(_PanelIMG);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Panel = function (_React$Component) {
+	  _inherits(Panel, _React$Component);
+
+	  function Panel() {
+	    _classCallCheck(this, Panel);
+
+	    return _possibleConstructorReturn(this, (Panel.__proto__ || Object.getPrototypeOf(Panel)).apply(this, arguments));
+	  }
+
+	  _createClass(Panel, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      this._showPanel();
+	      this.context.togglePanel();
+	    }
+	  }, {
+	    key: '_showPanel',
+	    value: function _showPanel() {
+	      var panelDOMNode = _reactDom2.default.findDOMNode(this.refs[this.props.compKey]);
+
+	      panelDOMNode.className += ' open-panel';
+	      document.getElementsByTagName('html')[0].style.overflow = 'hidden';
+	    }
+	  }, {
+	    key: '_hidePanel',
+	    value: function _hidePanel() {
+	      this.context.togglePanel();
+
+	      var panelDOMNode = _reactDom2.default.findDOMNode(this.refs[this.props.compKey]);
+
+	      panelDOMNode.className = 'jmc-panel close-panel';
+	      document.getElementsByTagName('html')[0].style = {};
+
+	      setTimeout(function () {
+	        this.context.router.push('/');
+	      }.bind(this), 600);
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement('div', { id: 'jmc-overlay', style: { display: 'block' }, onClick: this._hidePanel.bind(this) }),
+	        _react2.default.createElement(
+	          'article',
+	          { ref: this.props.compKey, id: this.props.compKey, className: 'jmc-panel' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'jmc-panel-inner', style: { borderColor: this.props.color } },
+	            _react2.default.createElement(_PanelClose2.default, { closePanel: this._hidePanel.bind(this) }),
+	            _react2.default.createElement(
+	              _PanelText2.default,
+	              null,
+	              this.props.title
+	            ),
+	            _react2.default.createElement(_PanelUp2.default, { containerKey: this.props.compKey }),
+	            _react2.default.createElement(_PanelIMG2.default, { src: this.props.imgSrc }),
+	            _react2.default.createElement(
+	              'h2',
+	              null,
+	              this.props.title
+	            ),
+	            this.props.children
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Panel;
+	}(_react2.default.Component);
+
+	Panel.contextTypes = {
+	  togglePanel: _react2.default.PropTypes.func,
+	  router: _react2.default.PropTypes.object.isRequired
+	};
+
+	exports.default = Panel;
+
+/***/ },
+/* 576 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(173);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var PanelClose = function (_React$Component) {
+	  _inherits(PanelClose, _React$Component);
+
+	  function PanelClose() {
+	    _classCallCheck(this, PanelClose);
+
+	    return _possibleConstructorReturn(this, (PanelClose.__proto__ || Object.getPrototypeOf(PanelClose)).apply(this, arguments));
+	  }
+
+	  _createClass(PanelClose, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'jmc-panel-close', onClick: this.props.closePanel },
+	        _react2.default.createElement('span', { className: 'fa fa-times-circle-o' })
+	      );
+	    }
+	  }]);
+
+	  return PanelClose;
+	}(_react2.default.Component);
+
+	exports.default = PanelClose;
+
+/***/ },
+/* 577 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactScroll = __webpack_require__(238);
+
+	var _reactScroll2 = _interopRequireDefault(_reactScroll);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var scroll = _reactScroll2.default.animateScroll;
+
+	var PanelUp = function (_React$Component) {
+	  _inherits(PanelUp, _React$Component);
+
+	  function PanelUp() {
+	    _classCallCheck(this, PanelUp);
+
+	    return _possibleConstructorReturn(this, (PanelUp.__proto__ || Object.getPrototypeOf(PanelUp)).apply(this, arguments));
+	  }
+
+	  _createClass(PanelUp, [{
+	    key: '_scrollTop',
+	    value: function _scrollTop() {
+	      scroll.scrollToTop({ containerId: this.props.containerKey });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'jmc-panel-up', onClick: this._scrollTop.bind(this) },
+	        _react2.default.createElement('span', { className: 'fa fa-arrow-circle-o-up' })
+	      );
+	    }
+	  }]);
+
+	  return PanelUp;
+	}(_react2.default.Component);
+
+	exports.default = PanelUp;
+
+/***/ },
+/* 578 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var PanelText = function (_React$Component) {
+	  _inherits(PanelText, _React$Component);
+
+	  function PanelText() {
+	    _classCallCheck(this, PanelText);
+
+	    return _possibleConstructorReturn(this, (PanelText.__proto__ || Object.getPrototypeOf(PanelText)).apply(this, arguments));
+	  }
+
+	  _createClass(PanelText, [{
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement(
+	        "div",
+	        { className: "jmc-panel-rotated-text" },
+	        _react2.default.createElement(
+	          "span",
+	          { className: "jmc-panel-rotated-text-inner" },
+	          this.props.children
+	        )
+	      );
+	    }
+	  }]);
+
+	  return PanelText;
+	}(_react2.default.Component);
+
+	exports.default = PanelText;
+
+/***/ },
+/* 579 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var PanelIMG = function (_React$Component) {
+	  _inherits(PanelIMG, _React$Component);
+
+	  function PanelIMG() {
+	    _classCallCheck(this, PanelIMG);
+
+	    return _possibleConstructorReturn(this, (PanelIMG.__proto__ || Object.getPrototypeOf(PanelIMG)).apply(this, arguments));
+	  }
+
+	  _createClass(PanelIMG, [{
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement(
+	        "div",
+	        { className: "jmc-panel-img" },
+	        _react2.default.createElement("img", { src: "images/" + this.props.src + ".jpg" })
+	      );
+	    }
+	  }]);
+
+	  return PanelIMG;
+	}(_react2.default.Component);
+
+	exports.default = PanelIMG;
+
+/***/ },
+/* 580 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var About = function (_React$Component) {
+	  _inherits(About, _React$Component);
+
+	  function About() {
+	    _classCallCheck(this, About);
+
+	    return _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).apply(this, arguments));
+	  }
+
+	  _createClass(About, [{
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement(
+	        "div",
+	        null,
+	        _react2.default.createElement(
+	          "div",
+	          { className: "jmc-table" },
+	          _react2.default.createElement(
+	            "div",
+	            { className: "jmc-table-row" },
+	            _react2.default.createElement(
+	              "div",
+	              null,
+	              _react2.default.createElement(
+	                "p",
+	                null,
+	                _react2.default.createElement("i", { className: "fa fa-user" }),
+	                ' ',
+	                _react2.default.createElement(
+	                  "strong",
+	                  null,
+	                  "Date of Birth"
+	                )
+	              ),
+	              _react2.default.createElement(
+	                "p",
+	                null,
+	                "May 28th 1993"
+	              )
+	            ),
+	            _react2.default.createElement(
+	              "div",
+	              null,
+	              _react2.default.createElement(
+	                "p",
+	                null,
+	                _react2.default.createElement("i", { className: "fa fa-language" }),
+	                ' ',
+	                _react2.default.createElement(
+	                  "strong",
+	                  null,
+	                  "Languages"
+	                )
+	              ),
+	              _react2.default.createElement(
+	                "p",
+	                null,
+	                "Portuguese, English, Spanish"
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            "div",
+	            { className: "jmc-table-row" },
+	            _react2.default.createElement(
+	              "div",
+	              null,
+	              _react2.default.createElement(
+	                "p",
+	                null,
+	                _react2.default.createElement("i", { className: "fa fa-gamepad" }),
+	                ' ',
+	                _react2.default.createElement(
+	                  "strong",
+	                  null,
+	                  "Hobbies"
+	                )
+	              ),
+	              _react2.default.createElement(
+	                "p",
+	                null,
+	                "Video Games, Sports, Programming, Music"
+	              )
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          "p",
+	          null,
+	          "I'm Jo\xE3o Cunha. I'm a web developer currently working at a cool company called",
+	          _react2.default.createElement(
+	            "a",
+	            { href: "http://wiremaze.com", target: "_blank" },
+	            ' ',
+	            "Wiremaze."
+	          ),
+	          _react2.default.createElement("br", null),
+	          "When I'm not developing awesome projects at work, I'm having fun with friends, playing video games, listening to music, getting tattoos and other things young people do.",
+	          _react2.default.createElement("br", null),
+	          "I currently live in Porto (also my native town) and I've also been working here for the past 3 years.",
+	          _react2.default.createElement("br", null),
+	          "If you'd like to see my projects you can check out my portfolio and feel free to send me a message."
+	        ),
+	        _react2.default.createElement("hr", null),
+	        _react2.default.createElement(
+	          "h2",
+	          null,
+	          "WHAT CAN I DO"
+	        ),
+	        _react2.default.createElement(
+	          "div",
+	          { className: "jmc-circle-icon-box" },
+	          _react2.default.createElement(
+	            "div",
+	            { className: "jmc-circle-icon-left" },
+	            _react2.default.createElement(
+	              "div",
+	              { className: "jmc-circle-icon-container" },
+	              _react2.default.createElement("i", { className: "fa fa-code" })
+	            ),
+	            _react2.default.createElement(
+	              "div",
+	              { className: "jmc-circle-icon-text" },
+	              _react2.default.createElement(
+	                "h5",
+	                null,
+	                "Programming"
+	              ),
+	              _react2.default.createElement(
+	                "p",
+	                null,
+	                "One of my hobbies and my main job, Programming is one of my favorite things in the world. Learning new technologies is always interesting and the possibilities are endless."
+	              )
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          "div",
+	          { className: "jmc-circle-icon-box" },
+	          _react2.default.createElement(
+	            "div",
+	            { className: "jmc-circle-icon-left" },
+	            _react2.default.createElement(
+	              "div",
+	              { className: "jmc-circle-icon-container" },
+	              _react2.default.createElement("i", { className: "fa fa-group" })
+	            ),
+	            _react2.default.createElement(
+	              "div",
+	              { className: "jmc-circle-icon-text" },
+	              _react2.default.createElement(
+	                "h5",
+	                null,
+	                "Scrum"
+	              ),
+	              _react2.default.createElement(
+	                "p",
+	                null,
+	                "For me this always came hand in hand with programming projects. Everyday I come into contact with a scrum environment so it's no stranger to me."
+	              )
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return About;
+	}(_react2.default.Component);
+
+	exports.default = About;
+
+/***/ },
+/* 581 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";

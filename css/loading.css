@@ -1,5 +1,5 @@
 #jmc-page-loading {
-  background-color: #303F9F;
+  background-color: #117899;
   position: fixed;
   top: 0;
   left: 0;
@@ -19,7 +19,7 @@
     padding: 0px 40px; }
 
 .jmc-loading-pulse {
-  color: #fff;
+  color: #FFF;
   font-weight: bold;
   letter-spacing: 20px;
   font-size: 5em;
@@ -31,7 +31,7 @@
     animation-delay: 0.4s; }
 
 .jmc-loading-text {
-  color: #C5CAE9;
+  color: #1BB2E3;
   position: relative;
   font-size: 90px;
   display: inline-block;
