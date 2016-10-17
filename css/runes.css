@@ -35,7 +35,7 @@
   display: block;
   margin: 0px; }
   .jmc-rune a {
-    color: #ffffff;
+    color: #FFF;
     display: table;
     height: 100%;
     width: 100%;
@@ -47,7 +47,7 @@
     vertical-align: middle;
     padding: 0px 80px; }
   .jmc-rune h2, .jmc-rune p, .jmc-rune .jmc-rotated-text, .jmc-rune i.jmc-rune-icon {
-    color: #fff; }
+    color: #FFF; }
   .jmc-rune h2 {
     margin: 0px; }
   .jmc-rune p {
@@ -139,7 +139,7 @@ i.jmc-rune-icon {
   right: 15px;
   bottom: 15px;
   font-size: 54px;
-  opacity: 0.1; }
+  opacity: 0.2; }
 
 .jmc-rotated-text {
   display: inline-block;
@@ -149,7 +149,7 @@ i.jmc-rune-icon {
   top: 15px;
   left: 10px;
   font-size: 54px;
-  opacity: 0.1; }
+  opacity: 0.2; }
 
 .jmc-rotated-text-inner {
   display: inline-block;

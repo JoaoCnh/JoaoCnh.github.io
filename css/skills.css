@@ -1,0 +1,79 @@
+.jmc-skills {
+  position: relative;
+  display: block;
+  margin: 40px 0px; }
+
+input[type="submit"], .jmc-button {
+  border: 3px solid #117899;
+  background-color: #117899;
+  color: #FFF;
+  font-size: 15px;
+  line-height: 1;
+  padding: 15px 30px;
+  display: inline-block;
+  margin: 0px 5px 0px 0px;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  word-spacing: 0.15em;
+  letter-spacing: 1px;
+  text-align: center;
+  cursor: pointer; }
+  input[type="submit"].primary, .jmc-button.primary {
+    background-color: #FFF;
+    color: #117899; }
+
+.jmc-skillbar {
+  background-color: #fff;
+  border: 1px solid #efefef;
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 47px; }
+
+.jmc-skillbar-title {
+  color: #FFF;
+  position: absolute;
+  top: 0;
+  left: 0; }
+  .jmc-skillbar-title span {
+    display: block;
+    padding: 0 15px;
+    height: 45px;
+    line-height: 45px; }
+
+.jmc-skillbar-bar {
+  background-color: #117899;
+  height: 45px;
+  width: 0px; }
+
+.jmc-skillbar-percent {
+  color: #117899;
+  position: absolute;
+  right: 16px;
+  top: 0;
+  height: 45px;
+  line-height: 45px;
+  opacity: 0.5; }
+
+input[type="submit"].jmc-button-about:hover,
+.jmc-button-about:hover,
+input[type="submit"].jmc-button-about:focus,
+.jmc-button-about:focus {
+  background-color: #117899;
+  border: 3px solid #117899;
+  color: #FFF; }
+
+input[type="submit"].jmc-button-resume:hover,
+.jmc-button-resume:hover,
+input[type="submit"].jmc-button-resume:focus,
+.jmc-button-resume:focus {
+  background-color: #A3B869;
+  border: 3px solid #A3B869;
+  color: #FFF; }
