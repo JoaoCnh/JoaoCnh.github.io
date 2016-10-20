@@ -31389,7 +31389,7 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var keys = __webpack_require__(604);
+	var apis = __webpack_require__(604);
 	var appData = __webpack_require__(605);
 
 	var JMCGoogleMap = (0, _withScriptjs2.default)((0, _reactGoogleMaps.withGoogleMap)(function (props) {
@@ -31420,7 +31420,7 @@
 	        "div",
 	        { className: "jmc-rune two-thirds", style: { backgroundColor: '#1F2041' } },
 	        _react2.default.createElement(JMCGoogleMap, {
-	          googleMapURL: "https://maps.googleapis.com/maps/api/js?key=" + keys.google_map_key,
+	          googleMapURL: "https://maps.googleapis.com/maps/api/js?key=" + apis.google_map_key,
 	          loadingElement: _react2.default.createElement(
 	            "div",
 	            null,
@@ -42789,7 +42789,7 @@
 
 	module.exports = {
 		"google_map_key": "AIzaSyD-6p7-Bh9xMRA-XO3Lo5SRgXvYjd_d0QQ",
-		"github_key": "09b0744a800aff557ce2b84c918b54ea8271eb9a"
+		"github_key": "d515ee13a0347081bfb952c65a608f4bb343f444"
 	};
 
 /***/ },
@@ -44285,7 +44285,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var keys = __webpack_require__(604);
+	var apis = __webpack_require__(604);
 
 	var GithubAPI = {
 
@@ -44294,7 +44294,7 @@
 	    return _axios2.default.get('https://api.github.com/users/' + username + '/repos', {
 	      params: {
 	        sort: 'pushed',
-	        access_token: keys.github_key
+	        access_token: apis.github_key
 	      }
 	    });
 	  },
@@ -44302,7 +44302,7 @@
 	  getRepoLanguages: function getRepoLanguages(username, repo) {
 	    return _axios2.default.get('https://api.github.com/repos/' + username + '/' + repo + '/languages', {
 	      params: {
-	        access_token: keys.github_key
+	        access_token: apis.github_key
 	      }
 	    });
 	  }
