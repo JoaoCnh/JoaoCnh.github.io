@@ -77,3 +77,11 @@ input[type="submit"].jmc-button-resume:focus,
   background-color: #A3B869;
   border: 3px solid #A3B869;
   color: #FFF; }
+
+input[type="submit"].jmc-button-portfolio:hover,
+.jmc-button-portfolio:hover,
+input[type="submit"].jmc-button-portfolio:focus,
+.jmc-button-portfolio:focus {
+  background-color: #F16C21;
+  border: 3px solid #F16C21;
+  color: #FFF; }

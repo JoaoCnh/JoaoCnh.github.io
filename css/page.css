@@ -1,5 +1,14 @@
+h2 {
+  font-size: 40px; }
+
 h5 {
   font-size: 26px; }
+
+h6 {
+  font-size: 22px; }
+
+a {
+  color: #117899; }
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -217,12 +226,6 @@ h1, h2, h3, h4, h5, h6, .jmc-rotated-text, .jmc-panel-rotated-text, .jmc-menu, .
 
 #jmc-back-to-top {
   cursor: pointer; }
-
-h2 {
-  font-size: 40px; }
-
-h6 {
-  font-size: 22px; }
 
 p {
   color: #7C8483;

@@ -18,6 +18,11 @@
     text-align: center;
     padding: 0px 40px; }
 
+.jmc-loading-pulse-container {
+  position: absolute;
+  top: 50%;
+  left: 45%; }
+
 .jmc-loading-pulse {
   color: #FFF;
   font-weight: bold;
@@ -29,6 +34,9 @@
     animation: pulse 0.4s alternate infinite ease-in-out; }
   .jmc-loading-pulse span:nth-child(odd) {
     animation-delay: 0.4s; }
+  .jmc-loading-pulse.jmc-loading-pulse-portfolio {
+    color: #F16C21;
+    padding-left: 35px; }
 
 .jmc-loading-text {
   color: #1BB2E3;

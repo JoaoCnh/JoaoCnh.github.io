@@ -104,7 +104,7 @@
   -webkit-overflow-scrolling: touch; }
 
 .jmc-panel-inner {
-  border-left: 80px solid #1F2041;
+  border-left: 80px solid #117899;
   position: relative;
   padding: 60px;
   min-height: 100%; }
@@ -371,3 +371,80 @@
 .jmc-resume-content {
   position: relative;
   padding: 30px; }
+
+.jmc-resume-footer {
+  position: relative;
+  padding-left: 30px;
+  padding-bottom: 10px; }
+
+@media only screen and (max-width: 480px) {
+  .jmc-panel-inner {
+    border-left-width: 0px;
+    padding: 80px 20px; }
+  .jmc-panel-close,
+  .jmc-panel-up {
+    right: 0px;
+    left: 0px;
+    width: 100%;
+    height: 60px; }
+    .jmc-panel-close.jmc-panel-about,
+    .jmc-panel-up.jmc-panel-about {
+      background-color: #117899; }
+    .jmc-panel-close.jmc-panel-resume,
+    .jmc-panel-up.jmc-panel-resume {
+      background-color: #A3B869; }
+    .jmc-panel-close.jmc-panel-portfolio,
+    .jmc-panel-up.jmc-panel-portfolio {
+      background-color: #F16C21; }
+    .jmc-panel-close.jmc-panel-contact,
+    .jmc-panel-up.jmc-panel-contact {
+      background-color: #EEC640; }
+    .jmc-panel-close span,
+    .jmc-panel-up span {
+      margin: 0px;
+      line-height: 60px;
+      font-size: 40px; }
+  .jmc-panel-rotated-text {
+    display: none; }
+  .jmc-panel-img {
+    margin: 0px -20px 20px 0px; }
+  h1, h2, h3, h4, h5, h6, p {
+    margin-bottom: 20px; }
+  h2, .jmc-rotated-text, i.jmc-box-icon {
+    font-size: 30px; }
+  .jmc-table {
+    margin: 20px 0px; }
+    .jmc-table .jmc-table-row div {
+      padding: 15px; }
+  .jmc-circle-icon-box {
+    margin: 10px 0px; }
+  .jmc-circle-icon-left .jmc-circle-icon-container,
+  .jmc-circle-icon-right .jmc-circle-icon-container {
+    width: 50px;
+    height: 50px; }
+    .jmc-circle-icon-left .jmc-circle-icon-container i,
+    .jmc-circle-icon-right .jmc-circle-icon-container i {
+      width: 50px;
+      height: 50px;
+      line-height: 50px; }
+      .jmc-circle-icon-left .jmc-circle-icon-container i:before,
+      .jmc-circle-icon-right .jmc-circle-icon-container i:before {
+        font-size: 24px; }
+  .jmc-circle-icon-left .jmc-circle-icon-text {
+    padding-left: 80px; } }
+
+@media only screen and (max-width: 600px) {
+  .jmc-panel-inner {
+    padding: 40px; }
+  .jmc-panel-img {
+    margin: 0px -40px 40px 0px; }
+  h2, .jmc-rotated-text, i.jmc-box-icon {
+    font-size: 34px; }
+  .jmc-table .jmc-table-row {
+    border-bottom: none; }
+    .jmc-table .jmc-table-row div {
+      border-bottom: 1px solid #E5E6E4;
+      width: 100%;
+      display: block; }
+      .jmc-table .jmc-table-row div:nth-of-type(odd) {
+        border-right: none; } }
