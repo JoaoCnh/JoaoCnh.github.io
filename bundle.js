@@ -42788,8 +42788,7 @@
 /***/ function(module, exports) {
 
 	module.exports = {
-		"google_map_key": "AIzaSyD-6p7-Bh9xMRA-XO3Lo5SRgXvYjd_d0QQ",
-		"github_key": "d515ee13a0347081bfb952c65a608f4bb343f444"
+		"google_map_key": "AIzaSyD-6p7-Bh9xMRA-XO3Lo5SRgXvYjd_d0QQ"
 	};
 
 /***/ },
@@ -44285,26 +44284,19 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var apis = __webpack_require__(604);
-
 	var GithubAPI = {
 
 	  // GithubAPI.getRepos('JoaoCnh').then((data) => console.log(data));
 	  getRepos: function getRepos(username) {
 	    return _axios2.default.get('https://api.github.com/users/' + username + '/repos', {
 	      params: {
-	        sort: 'pushed',
-	        access_token: apis.github_key
+	        sort: 'pushed'
 	      }
 	    });
 	  },
 
 	  getRepoLanguages: function getRepoLanguages(username, repo) {
-	    return _axios2.default.get('https://api.github.com/repos/' + username + '/' + repo + '/languages', {
-	      params: {
-	        access_token: apis.github_key
-	      }
-	    });
+	    return _axios2.default.get('https://api.github.com/repos/' + username + '/' + repo + '/languages');
 	  }
 
 	};
