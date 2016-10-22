@@ -43815,11 +43815,6 @@
 	          'For more information about me and my skills feel free to download my resume.'
 	        ),
 	        _react2.default.createElement(
-	          _reactRouter.Link,
-	          { to: 'contact', className: 'jmc-button jmc-button-resume jmc-panel-open' },
-	          'Contact me'
-	        ),
-	        _react2.default.createElement(
 	          'a',
 	          { href: 'files/jmc-resume.pdf', className: 'jmc-button jmc-button-resume primary', download: true },
 	          'Download Resume'
@@ -63247,7 +63242,7 @@
 /* 654 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -63277,9 +63272,40 @@
 	  }
 
 	  _createClass(Contact, [{
-	    key: 'render',
+	    key: "render",
 	    value: function render() {
-	      return _react2.default.createElement('div', null);
+	      return _react2.default.createElement(
+	        "div",
+	        null,
+	        _react2.default.createElement(
+	          "form",
+	          { className: "jmc-form", action: "https://formspree.io/joaocnhgithubio@gmail.com",
+	            method: "POST" },
+	          _react2.default.createElement(
+	            "label",
+	            null,
+	            "Name"
+	          ),
+	          _react2.default.createElement("input", { type: "text", name: "name", required: "required", maxlength: "50" }),
+	          _react2.default.createElement(
+	            "label",
+	            null,
+	            "Email"
+	          ),
+	          _react2.default.createElement("input", { type: "email", name: "_replyto", required: "required", maxlength: "50" }),
+	          _react2.default.createElement(
+	            "label",
+	            null,
+	            "Your message"
+	          ),
+	          _react2.default.createElement("textarea", { name: "message", required: "required" }),
+	          _react2.default.createElement(
+	            "div",
+	            { className: "submit-container" },
+	            _react2.default.createElement("input", { type: "submit", value: "Send", className: "jmc-button jmc-button-contact" })
+	          )
+	        )
+	      );
 	    }
 	  }]);
 
