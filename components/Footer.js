@@ -8,19 +8,19 @@ export default () => (
         <div className="col-md-6 col-sm-6">
           <ul className="social-icons">
             <li>
-              <a href="https://www.facebook.com/joao.m.cunha.56" className="fa fa-facebook"></a>
+              <a href="https://www.facebook.com/joao.m.cunha.56" className="fa fa-facebook" target="_blank"></a>
             </li>
             <li>
-              <a href="https://twitter.com/lokuzt" className="fa fa-twitter"></a>
+              <a href="https://twitter.com/lokuzt" className="fa fa-twitter" target="_blank"></a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/joao-cunha-6a98a29b/" className="fa fa-linkedin"></a>
+              <a href="https://www.linkedin.com/in/joao-cunha-6a98a29b/" className="fa fa-linkedin" target="_blank"></a>
             </li>
             <li>
-              <a href="https://github.com/JoaoCnh" className="fa fa-github"></a>
+              <a href="https://github.com/JoaoCnh" className="fa fa-github" target="_blank"></a>
             </li>
             <li>
-              <a href="https://medium.com/@joomiguelcunha" className="fa fa-medium"></a>
+              <a href="https://medium.com/@joomiguelcunha" className="fa fa-medium" target="_blank"></a>
             </li>
           </ul>
         </div>
