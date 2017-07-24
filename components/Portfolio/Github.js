@@ -17,15 +17,28 @@ export default class extends React.Component {
 		const res = await fetch('https://api.github.com/users/JoaoCnh/repos');
 		const repos = await res.json();
 
-		this.setState({
-			repos,
-			isLoading: false,
-		});
+		setTimeout(() => {
+			this.setState({
+				repos,
+				isLoading: false,
+			});
+		}, 1500);
 	}
 
 	render() {
 		if (this.state.isLoading) {
-			return (<h1>loading</h1>);
+			return (
+				<div className="container">
+					<div className="loading-container">
+						<div className="sk-folding-cube">
+						  <div className="sk-cube1 sk-cube"></div>
+						  <div className="sk-cube2 sk-cube"></div>
+						  <div className="sk-cube4 sk-cube"></div>
+						  <div className="sk-cube3 sk-cube"></div>
+						</div>
+					</div>
+				</div>
+			);
 		}
 
 		const repos = this.state.repos.map((repo) => (
@@ -33,8 +46,21 @@ export default class extends React.Component {
 		));
 
 		return (
-			<div className="card-columns">
-				{repos}
+			<div id="portfolio">
+				<div className="container">
+					<div className="row">
+						<div className="col-sm-12">
+							<h2>
+								<i className="fa fa-github"></i>
+								<span style={{marginLeft: 10}}>{`Recent Projects`}</span>
+							</h2>
+			        <p>{`My Github projects/repos`}</p>
+						</div>
+			    </div>
+			    <div className="row mt30">
+			    	{repos}
+			    </div>
+			  </div>
 			</div>
 		);
 	}
