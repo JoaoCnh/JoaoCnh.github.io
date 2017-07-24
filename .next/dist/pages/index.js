@@ -47,5 +47,68 @@ exports.default = function () {
       fileName: _jsxFileName,
       lineNumber: 10
     }
-  }, "Jo\xE3o Miguel Cunha"))))));
+  }, "Jo\xE3o Miguel Cunha"))))), _react2.default.createElement("div", { className: "divider", __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    }
+  }, _react2.default.createElement("div", { className: "container", __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    }
+  }, _react2.default.createElement("div", { className: "row", __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    }
+  }, _react2.default.createElement("div", { className: "col-md-4 col-sm-6", __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    }
+  }, _react2.default.createElement("div", { className: "divider-wrapper divider-one", __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    }
+  }, _react2.default.createElement("i", { className: "fa fa-gears", __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    }
+  }), _react2.default.createElement("h2", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    }
+  }, "Software Engineer"))), _react2.default.createElement("div", { className: "col-md-4 col-sm-6", __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    }
+  }, _react2.default.createElement("div", { className: "divider-wrapper divider-two", __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    }
+  }, _react2.default.createElement("i", { className: "fa fa-laptop", __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    }
+  }), _react2.default.createElement("h2", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    }
+  }, "Full-Stack Web Developer"))), _react2.default.createElement("div", { className: "col-md-4 col-sm-12", __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    }
+  }, _react2.default.createElement("div", { className: "divider-wrapper divider-three", __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    }
+  }, _react2.default.createElement("img", { src: "/static/img/react.png", __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    }
+  }), _react2.default.createElement("h2", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    }
+  }, "React JS enthusiast")))))));
 };
