@@ -1,8 +1,11 @@
-import React from 'react';
+import { Component } from 'react';
+import TransitionGroup from 'react-transition-group/TransitionGroup';
 
 import Card from './Card';
+import Fade from '../anim/Fade';
+import Loading from '../anim/Loading';
 
-export default class extends React.Component {
+export default class extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -26,25 +29,6 @@ export default class extends React.Component {
 	}
 
 	render() {
-		if (this.state.isLoading) {
-			return (
-				<div className="container">
-					<div className="loading-container">
-						<div className="sk-folding-cube">
-						  <div className="sk-cube1 sk-cube"></div>
-						  <div className="sk-cube2 sk-cube"></div>
-						  <div className="sk-cube4 sk-cube"></div>
-						  <div className="sk-cube3 sk-cube"></div>
-						</div>
-					</div>
-				</div>
-			);
-		}
-
-		const repos = this.state.repos.map((repo) => (
-			<Card key={repo.id} repo={repo} />
-		));
-
 		return (
 			<div id="portfolio">
 				<div className="container">
@@ -58,7 +42,14 @@ export default class extends React.Component {
 						</div>
 			    </div>
 			    <div className="row mt30">
-			    	{repos}
+			    	{this.state.isLoading ? <Loading /> : <div />}
+			    	<TransitionGroup>
+			    		{this.state.repos.map((repo) => (
+								<Fade key={repo.id}>
+									<Card repo={repo} />
+								</Fade>
+							))}
+			    	</TransitionGroup>
 			    </div>
 			  </div>
 			</div>
