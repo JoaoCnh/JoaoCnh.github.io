@@ -1,5 +1,4 @@
 module.exports = {
-	exportDir: 'docs',
   exportPathMap: function () {
     return {
       "/": { page: "/" },
