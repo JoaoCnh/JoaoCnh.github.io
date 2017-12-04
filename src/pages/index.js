@@ -6,10 +6,12 @@ import { decorateSelector } from "../theme";
 // images
 import MuhFaceImg from "../../public/muhface.jpg";
 import GithubImg from "../../public/github.png";
+import CodeImg from "../../public/code.png";
+import DesignImg from "../../public/design.png";
 
 export const aboutMe = {
   name: "about-me",
-  niceName: "About Me",
+  niceName: "About me",
   Icon: MuhFaceImg,
   color: decorateSelector(() => "#6CAEDD"),
   render: page => <AboutMe page={page} />
@@ -17,25 +19,25 @@ export const aboutMe = {
 
 export const myProjects = {
   name: "my-projects",
-  niceName: "My Projects",
+  niceName: "My projects",
   Icon: GithubImg,
   color: decorateSelector(() => "#F9FBFF"),
   render: page => <AboutMe page={page} />
 };
 
-export const whereToFindMe = {
-  name: "where-to-find-me",
-  niceName: "Where to find me",
-  Icon: MuhFaceImg,
-  color: decorateSelector(() => "#AD78DC"),
+export const MyExperience = {
+  name: "my-experience",
+  niceName: "My experience",
+  Icon: CodeImg,
+  color: decorateSelector(() => "#41B883"),
   render: page => <AboutMe page={page} />
 };
 
 export const whateverMe = {
-  name: "whatever-me",
-  niceName: "Whatever Me",
-  Icon: MuhFaceImg,
-  color: decorateSelector(() => "#AA1E1E"),
+  name: "this-design",
+  niceName: "This design",
+  Icon: DesignImg,
+  color: decorateSelector(() => "#FF9800"),
   render: page => <AboutMe page={page} />
 };
 
@@ -50,8 +52,8 @@ export default function getDefinition(theme) {
       return aboutMe;
     case myProjects.name:
       return myProjects;
-    case whereToFindMe.name:
-      return whereToFindMe;
+    case MyExperience.name:
+      return MyExperience;
     case whateverMe.name:
       return whateverMe;
   }

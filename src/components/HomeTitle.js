@@ -101,7 +101,7 @@ const isBot = () => {
 export default ({ page }) => (
   <Container>
     <Title title="João Cunha">
-      <Primary>Welcome to,</Primary>{" "}
+      <Primary>I'm</Primary>{" "}
       <Secondary style={{ color: page.color() }}>João Cunha</Secondary>
     </Title>
     <SubTitle title="I code and stuff">
