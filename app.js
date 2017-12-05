@@ -28,6 +28,20 @@ module.exports = __webpack_require__.p + "muhface.391eb239.jpg";
 
 /***/ }),
 
+/***/ "./public/img/me.jpg":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "me.f26f4c8d.jpg";
+
+/***/ }),
+
+/***/ "./public/img/mesmall.jpg":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "mesmall.d8e44bdb.jpg";
+
+/***/ }),
+
 /***/ "./public/img/social/github.svg":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -233,9 +247,13 @@ var Animation = function (_React$PureComponent) {
         )
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_9__common_flex_MaxWidth__["a" /* default */],
-        { width: 1280 },
-        page.render(page)
+        __WEBPACK_IMPORTED_MODULE_8__common_flex_Centered__["a" /* default */],
+        { horizontal: true },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_9__common_flex_MaxWidth__["a" /* default */],
+          { width: 1280 },
+          page.render(page)
+        )
       )
     );
   };
@@ -275,7 +293,7 @@ function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return s
 
 var delay = Object(__WEBPACK_IMPORTED_MODULE_3__utils_animations__["a" /* default */])(0);
 
-var Container = __WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* default */].div(_templateObject, delay);
+var Container = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].div(_templateObject, delay);
 
 var Background = function (_React$PureComponent) {
   _inherits(Background, _React$PureComponent);
@@ -357,7 +375,7 @@ function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return s
 
 
 
-var Cube = __WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* default */].div(_templateObject, function (props) {
+var Cube = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].div(_templateObject, function (props) {
   return props.size + 1;
 }, function (props) {
   return props.size + 1;
@@ -370,10 +388,10 @@ var Cube = __WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* default */].di
 var getAnimation = function getAnimation() {
   var offset = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
 
-  return Object(__WEBPACK_IMPORTED_MODULE_1_styled_components__["c" /* keyframes */])(_templateObject2, 45 + offset, -37.5 + offset, 45 + offset + 360, -37.5 + offset + 360);
+  return Object(__WEBPACK_IMPORTED_MODULE_1_styled_components__["keyframes"])(_templateObject2, 45 + offset, -37.5 + offset, 45 + offset + 360, -37.5 + offset + 360);
 };
 
-var Sides = __WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* default */].div(_templateObject3, function (_ref) {
+var Sides = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].div(_templateObject3, function (_ref) {
   var noAnimation = _ref.noAnimation,
       offset = _ref.offset,
       speed = _ref.speed;
@@ -386,7 +404,7 @@ var Sides = __WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* default */].d
   return size / 70;
 });
 
-var Side = __WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* default */].div(_templateObject4, function (_ref4) {
+var Side = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].div(_templateObject4, function (_ref4) {
   var rotate = _ref4.rotate;
   return rotate;
 }, function (_ref5) {
@@ -528,9 +546,9 @@ function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return s
 
 var RADIUS = 250;
 
-var Container = __WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* default */].div(_templateObject, RADIUS, Object(__WEBPACK_IMPORTED_MODULE_4__utils_animations__["a" /* default */])(0), __WEBPACK_IMPORTED_MODULE_5__utils_media__["a" /* default */].tablet(_templateObject2, RADIUS));
+var Container = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].div(_templateObject, RADIUS, Object(__WEBPACK_IMPORTED_MODULE_4__utils_animations__["a" /* default */])(0), __WEBPACK_IMPORTED_MODULE_5__utils_media__["a" /* default */].tablet(_templateObject2, RADIUS));
 
-var SmallCube = Object(__WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* default */])(function (_React$Component) {
+var SmallCube = Object(__WEBPACK_IMPORTED_MODULE_1_styled_components__["default"])(function (_React$Component) {
   _inherits(SmallCubeInner, _React$Component);
 
   function SmallCubeInner() {
@@ -806,19 +824,19 @@ function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return s
 
 
 
-var Container = __WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* default */].div(_templateObject, __WEBPACK_IMPORTED_MODULE_2__utils_media__["a" /* default */].tablet(_templateObject2));
+var Container = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].div(_templateObject, __WEBPACK_IMPORTED_MODULE_2__utils_media__["a" /* default */].tablet(_templateObject2));
 
-var Title = __WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* default */].h1(_templateObject3, __WEBPACK_IMPORTED_MODULE_2__utils_media__["a" /* default */].tablet(_templateObject4), __WEBPACK_IMPORTED_MODULE_2__utils_media__["a" /* default */].phone(_templateObject5));
+var Title = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].h1(_templateObject3, __WEBPACK_IMPORTED_MODULE_2__utils_media__["a" /* default */].tablet(_templateObject4), __WEBPACK_IMPORTED_MODULE_2__utils_media__["a" /* default */].phone(_templateObject5));
 
-var SubTitle = __WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* default */].h2(_templateObject6, Object(__WEBPACK_IMPORTED_MODULE_3__utils_animations__["b" /* fadeIn */])(0.4), __WEBPACK_IMPORTED_MODULE_2__utils_media__["a" /* default */].tablet(_templateObject4), __WEBPACK_IMPORTED_MODULE_2__utils_media__["a" /* default */].phone(_templateObject7));
+var SubTitle = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].h2(_templateObject6, Object(__WEBPACK_IMPORTED_MODULE_3__utils_animations__["b" /* fadeIn */])(0.4), __WEBPACK_IMPORTED_MODULE_2__utils_media__["a" /* default */].tablet(_templateObject4), __WEBPACK_IMPORTED_MODULE_2__utils_media__["a" /* default */].phone(_templateObject7));
 
-var Buttons = __WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* default */].div(_templateObject8, Object(__WEBPACK_IMPORTED_MODULE_3__utils_animations__["b" /* fadeIn */])(0.5), __WEBPACK_IMPORTED_MODULE_2__utils_media__["a" /* default */].tablet(_templateObject9), __WEBPACK_IMPORTED_MODULE_2__utils_media__["a" /* default */].tablet(_templateObject10), __WEBPACK_IMPORTED_MODULE_2__utils_media__["a" /* default */].phone(_templateObject11));
+var Buttons = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].div(_templateObject8, Object(__WEBPACK_IMPORTED_MODULE_3__utils_animations__["b" /* fadeIn */])(0.5), __WEBPACK_IMPORTED_MODULE_2__utils_media__["a" /* default */].tablet(_templateObject9), __WEBPACK_IMPORTED_MODULE_2__utils_media__["a" /* default */].tablet(_templateObject10), __WEBPACK_IMPORTED_MODULE_2__utils_media__["a" /* default */].phone(_templateObject11));
 
-var Primary = __WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* default */].div(_templateObject12, Object(__WEBPACK_IMPORTED_MODULE_3__utils_animations__["b" /* fadeIn */])(0.3), function (props) {
+var Primary = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].div(_templateObject12, Object(__WEBPACK_IMPORTED_MODULE_3__utils_animations__["b" /* fadeIn */])(0.3), function (props) {
   return props.theme.primary;
 });
 
-var Secondary = __WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* default */].div(_templateObject13, Object(__WEBPACK_IMPORTED_MODULE_3__utils_animations__["b" /* fadeIn */])(0.2));
+var Secondary = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].div(_templateObject13, Object(__WEBPACK_IMPORTED_MODULE_3__utils_animations__["b" /* fadeIn */])(0.2));
 
 var isBot = function isBot() {
   return (/google|baidu|bing|msn|duckduckgo|teoma|slurp|yandex/i.test(navigator.userAgent)
@@ -882,7 +900,7 @@ function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return s
 
 
 
-/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_styled_components__["b" /* default */].div(_templateObject));
+/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_styled_components__["default"].div(_templateObject));
 
 /***/ }),
 
@@ -907,7 +925,7 @@ function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return s
 
 
 
-var Heading = __WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* default */].h2(_templateObject, __WEBPACK_IMPORTED_MODULE_2__utils_media__["a" /* default */].phone(_templateObject2), function (_ref) {
+var Heading = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].h2(_templateObject, __WEBPACK_IMPORTED_MODULE_2__utils_media__["a" /* default */].phone(_templateObject2), function (_ref) {
   var color = _ref.color;
   return color();
 }, function (_ref2) {
@@ -915,7 +933,7 @@ var Heading = __WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* default */]
   return color.clearer(0.6);
 });
 
-var SubHeading = __WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* default */].p(_templateObject3);
+var SubHeading = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].p(_templateObject3);
 
 
 
@@ -932,7 +950,7 @@ function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return s
 
 
 
-/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_styled_components__["b" /* default */].div(_templateObject));
+/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_styled_components__["default"].div(_templateObject));
 
 /***/ }),
 
@@ -1053,7 +1071,7 @@ function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return s
 
 
 
-/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_styled_components__["b" /* default */].div(_templateObject, function (props) {
+/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_styled_components__["default"].div(_templateObject, function (props) {
   return props.vertical && "justify-content: center;";
 }, function (props) {
   return props.horizontal && "align-items: center;";
@@ -1072,7 +1090,7 @@ function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return s
 
 
 
-/* unused harmony default export */ var _unused_webpack_default_export = (__WEBPACK_IMPORTED_MODULE_0_styled_components__["b" /* default */].div(_templateObject, function (props) {
+/* unused harmony default export */ var _unused_webpack_default_export = (__WEBPACK_IMPORTED_MODULE_0_styled_components__["default"].div(_templateObject, function (props) {
   return props.flex && "flex: " + props.flex;
 }, function (props) {
   return props.justifyContent;
@@ -1097,9 +1115,9 @@ function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return s
 
 
 
-var Container = __WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* default */].div(_templateObject);
+var Container = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].div(_templateObject);
 
-var InnerContainer = __WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* default */].div(_templateObject2, function (props) {
+var InnerContainer = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].div(_templateObject2, function (props) {
   return props.width;
 });
 
@@ -1140,7 +1158,7 @@ function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return s
 
 
 
-var Link = __WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* default */].a(_templateObject, function (_ref) {
+var Link = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].a(_templateObject, function (_ref) {
   var color = _ref.color;
   return color();
 }, function (_ref2) {
@@ -1149,7 +1167,7 @@ var Link = __WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* default */].a(
 });
 
 /* harmony default export */ __webpack_exports__["b"] = (Link);
-var LinkIcon = Object(__WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* default */])(__WEBPACK_IMPORTED_MODULE_2_react_icons_lib_md_link___default.a)(_templateObject2);
+var LinkIcon = Object(__WEBPACK_IMPORTED_MODULE_1_styled_components__["default"])(__WEBPACK_IMPORTED_MODULE_2_react_icons_lib_md_link___default.a)(_templateObject2);
 
 /***/ }),
 
@@ -1166,7 +1184,7 @@ function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return s
 
 
 
-/* unused harmony default export */ var _unused_webpack_default_export = (__WEBPACK_IMPORTED_MODULE_0_styled_components__["b" /* default */].div(_templateObject, __WEBPACK_IMPORTED_MODULE_1__spacing__["a" /* default */]));
+/* unused harmony default export */ var _unused_webpack_default_export = (__WEBPACK_IMPORTED_MODULE_0_styled_components__["default"].div(_templateObject, __WEBPACK_IMPORTED_MODULE_1__spacing__["a" /* default */]));
 
 /***/ }),
 
@@ -1245,7 +1263,7 @@ function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return s
 
 
 
-var Container = __WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* default */].div(_templateObject, function (_ref) {
+var Container = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].div(_templateObject, function (_ref) {
   var theme = _ref.theme;
   return theme.background;
 }, function (_ref2) {
@@ -1253,19 +1271,19 @@ var Container = __WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* default *
   return color.clearer(0.8);
 }, __WEBPACK_IMPORTED_MODULE_9__utils_media__["a" /* default */].tablet(_templateObject2), __WEBPACK_IMPORTED_MODULE_9__utils_media__["a" /* default */].phone(_templateObject3));
 
-var Pane = Object(__WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* default */])(__WEBPACK_IMPORTED_MODULE_2__common_flex_MaxWidth__["a" /* default */])(_templateObject4);
+var Pane = Object(__WEBPACK_IMPORTED_MODULE_1_styled_components__["default"])(__WEBPACK_IMPORTED_MODULE_2__common_flex_MaxWidth__["a" /* default */])(_templateObject4);
 
-var Flex = __WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* default */].div(_templateObject5, __WEBPACK_IMPORTED_MODULE_9__utils_media__["a" /* default */].phone(_templateObject6));
+var Flex = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].div(_templateObject5, __WEBPACK_IMPORTED_MODULE_9__utils_media__["a" /* default */].phone(_templateObject6));
 
-var Icons = __WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* default */].div(_templateObject7, __WEBPACK_IMPORTED_MODULE_9__utils_media__["a" /* default */].phone(_templateObject8));
+var Icons = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].div(_templateObject7, __WEBPACK_IMPORTED_MODULE_9__utils_media__["a" /* default */].phone(_templateObject8));
 
-var IconContainer = __WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* default */].div(_templateObject9, __WEBPACK_IMPORTED_MODULE_9__utils_media__["a" /* default */].phone(_templateObject10), function (_ref3) {
+var IconContainer = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].div(_templateObject9, __WEBPACK_IMPORTED_MODULE_9__utils_media__["a" /* default */].phone(_templateObject10), function (_ref3) {
   var selected = _ref3.selected,
       template = _ref3.template;
-  return selected && Object(__WEBPACK_IMPORTED_MODULE_1_styled_components__["a" /* css */])(_templateObject11, template.color.clearer(0.9), template.color.clearer(0.9));
+  return selected && Object(__WEBPACK_IMPORTED_MODULE_1_styled_components__["css"])(_templateObject11, template.color.clearer(0.9), template.color.clearer(0.9));
 });
 
-var TemplateName = __WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* default */].div(_templateObject12);
+var TemplateName = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].div(_templateObject12);
 
 var SocialNetworks = function (_React$Component) {
   _inherits(SocialNetworks, _React$Component);
@@ -1390,7 +1408,7 @@ function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return s
 
 
 
-var Container = __WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* default */].div(_templateObject, function (props) {
+var Container = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].div(_templateObject, function (props) {
   return Object(__WEBPACK_IMPORTED_MODULE_2__utils_animations__["b" /* fadeIn */])(props.i * 0.1);
 });
 
@@ -1458,15 +1476,22 @@ var icons = [{
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_styled_components__ = __webpack_require__("./node_modules/styled-components/dist/styled-components.es.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_media__ = __webpack_require__("./node_modules/react-media/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_media___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_media__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__SocialNetworks__ = __webpack_require__("./src/components/pages/AboutMe/SocialNetworks.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_flex_Centered__ = __webpack_require__("./src/components/common/flex/Centered.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__common_Headings__ = __webpack_require__("./src/components/common/Headings.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__common_links_Link__ = __webpack_require__("./src/components/common/links/Link.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_progressive_bg_image__ = __webpack_require__("./node_modules/react-progressive-bg-image/lib/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_progressive_bg_image___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react_progressive_bg_image__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__SocialNetworks__ = __webpack_require__("./src/components/pages/AboutMe/SocialNetworks.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__common_flex_Centered__ = __webpack_require__("./src/components/common/flex/Centered.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__common_Headings__ = __webpack_require__("./src/components/common/Headings.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__common_links_Link__ = __webpack_require__("./src/components/common/links/Link.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__public_img_me_jpg__ = __webpack_require__("./public/img/me.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__public_img_me_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__public_img_me_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__public_img_mesmall_jpg__ = __webpack_require__("./public/img/mesmall.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__public_img_mesmall_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__public_img_mesmall_jpg__);
 var _templateObject = _taggedTemplateLiteralLoose(["\n  color: ", ";\n  text-shadow: 0 0 50px ", ";\n"], ["\n  color: ", ";\n  text-shadow: 0 0 50px ", ";\n"]),
     _templateObject2 = _taggedTemplateLiteralLoose(["\n  flex: 1;\n  display: flex;\n  margin-right: 2rem;\n  flex-direction: column;\n"], ["\n  flex: 1;\n  display: flex;\n  margin-right: 2rem;\n  flex-direction: column;\n"]),
     _templateObject3 = _taggedTemplateLiteralLoose(["\n  display: flex;\n  position: relative;\n  margin-right: 2rem;\n  flex-direction: row;\n  flex-wrap: wrap;\n"], ["\n  display: flex;\n  position: relative;\n  margin-right: 2rem;\n  flex-direction: row;\n  flex-wrap: wrap;\n"]),
     _templateObject4 = _taggedTemplateLiteralLoose(["\n  color: ", ";\n  text-shadow: 0 0 50px ", ";\n  margin-left: 0;\n  margin-right: 0;\n  margin-top: 0;\n  padding-bottom: 0;\n  padding-left: 0;\n  padding-right: 0;\n  padding-top: 0;\n  margin-bottom: 1.0875rem;\n  text-rendering: optimizeLegibility;\n  font-size: 2.35824rem;\n  line-height: 1.1;\n"], ["\n  color: ", ";\n  text-shadow: 0 0 50px ", ";\n  margin-left: 0;\n  margin-right: 0;\n  margin-top: 0;\n  padding-bottom: 0;\n  padding-left: 0;\n  padding-right: 0;\n  padding-top: 0;\n  margin-bottom: 1.0875rem;\n  text-rendering: optimizeLegibility;\n  font-size: 2.35824rem;\n  line-height: 1.1;\n"]),
-    _templateObject5 = _taggedTemplateLiteralLoose(["\n  margin-left: 0;\n  margin-right: 0;\n  margin-top: 0;\n  padding-bottom: 0;\n  padding-left: 0;\n  padding-right: 0;\n  padding-top: 0;\n  margin-bottom: 1.0875rem;\n  color: rgba(255, 255, 255, 0.8);\n  font-size: 1.8rem;\n"], ["\n  margin-left: 0;\n  margin-right: 0;\n  margin-top: 0;\n  padding-bottom: 0;\n  padding-left: 0;\n  padding-right: 0;\n  padding-top: 0;\n  margin-bottom: 1.0875rem;\n  color: rgba(255, 255, 255, 0.8);\n  font-size: 1.8rem;\n"]);
+    _templateObject5 = _taggedTemplateLiteralLoose(["\n  margin-left: 0;\n  margin-right: 0;\n  margin-top: 0;\n  padding-bottom: 0;\n  padding-left: 0;\n  padding-right: 0;\n  padding-top: 0;\n  margin-bottom: 1.0875rem;\n  color: rgba(255, 255, 255, 0.8);\n  font-size: 1.8rem;\n"], ["\n  margin-left: 0;\n  margin-right: 0;\n  margin-top: 0;\n  padding-bottom: 0;\n  padding-left: 0;\n  padding-right: 0;\n  padding-top: 0;\n  margin-bottom: 1.0875rem;\n  color: rgba(255, 255, 255, 0.8);\n  font-size: 1.8rem;\n"]),
+    _templateObject6 = _taggedTemplateLiteralLoose(["\n  height: 500px;\n  background-size: contain;\n  background-position: center center;\n"], ["\n  height: 500px;\n  background-size: contain;\n  background-position: center center;\n"]);
 
 function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
 
@@ -1479,7 +1504,11 @@ function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return s
 
 
 
-var Text = __WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* default */].span(_templateObject, function (_ref) {
+
+
+
+
+var Text = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].span(_templateObject, function (_ref) {
   var color = _ref.color;
   return color();
 }, function (_ref2) {
@@ -1487,11 +1516,11 @@ var Text = __WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* default */].sp
   return color.clearer(0.6);
 });
 
-var Column = __WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* default */].div(_templateObject2);
+var Column = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].div(_templateObject2);
 
-var Row = __WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* default */].div(_templateObject3);
+var Row = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].div(_templateObject3);
 
-var ColumnHeading = __WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* default */].h3(_templateObject4, function (_ref3) {
+var ColumnHeading = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].h3(_templateObject4, function (_ref3) {
   var color = _ref3.color;
   return color();
 }, function (_ref4) {
@@ -1499,7 +1528,9 @@ var ColumnHeading = __WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* defau
   return color.clearer(0.6);
 });
 
-var ColumnSubHeading = __WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* default */].p(_templateObject5);
+var ColumnSubHeading = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].p(_templateObject5);
+
+var StyledProgressiveImage = Object(__WEBPACK_IMPORTED_MODULE_1_styled_components__["default"])(__WEBPACK_IMPORTED_MODULE_3_react_progressive_bg_image___default.a)(_templateObject6);
 
 /* harmony default export */ __webpack_exports__["a"] = (function (_ref5) {
   var page = _ref5.page;
@@ -1508,20 +1539,20 @@ var ColumnSubHeading = __WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* de
     "div",
     null,
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      __WEBPACK_IMPORTED_MODULE_4__common_flex_Centered__["a" /* default */],
+      __WEBPACK_IMPORTED_MODULE_5__common_flex_Centered__["a" /* default */],
       { horizontal: true },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_5__common_Headings__["a" /* Heading */],
+        __WEBPACK_IMPORTED_MODULE_6__common_Headings__["a" /* Heading */],
         { color: page.color },
         "Hello! My name is Jo\xE3o Cunha"
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_5__common_Headings__["b" /* SubHeading */],
+        __WEBPACK_IMPORTED_MODULE_6__common_Headings__["b" /* SubHeading */],
         null,
         "I'm a Full-Stack developer working",
         " ",
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_6__common_links_Link__["b" /* default */],
+          __WEBPACK_IMPORTED_MODULE_7__common_links_Link__["b" /* default */],
           {
             color: page.color,
             href: "https://www.wiremaze.com/",
@@ -1567,71 +1598,89 @@ var ColumnSubHeading = __WEBPACK_IMPORTED_MODULE_1_styled_components__["b" /* de
           "Programming"
         ),
         "."
-      )
-    ),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      __WEBPACK_IMPORTED_MODULE_2_react_media___default.a,
-      { query: "(min-width: 1280px)" },
+      ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        Row,
-        null,
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          Column,
-          null,
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            ColumnHeading,
-            { color: page.color },
-            "setup img"
-          )
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          Column,
-          null,
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            ColumnHeading,
-            { color: page.color },
-            "Welcome to my page"
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            ColumnSubHeading,
-            null,
-            "I hope you enjoy your stay and please feel free to get to know me more and connect with me in the following social networks"
-          )
-        )
-      )
-    ),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      __WEBPACK_IMPORTED_MODULE_2_react_media___default.a,
-      { query: "(max-width: 1280px)" },
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_0_react__["Fragment"],
-        null,
+        __WEBPACK_IMPORTED_MODULE_2_react_media___default.a,
+        { query: "(min-width: 1280px)" },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           Row,
           null,
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            ColumnHeading,
-            { color: page.color },
-            "setup img"
-          )
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          Row,
-          null,
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            ColumnHeading,
-            { color: page.color },
-            "Welcome to my page"
+            Column,
+            null,
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              ColumnHeading,
+              { color: page.color },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(StyledProgressiveImage, {
+                src: __WEBPACK_IMPORTED_MODULE_8__public_img_me_jpg___default.a,
+                placeholder: __WEBPACK_IMPORTED_MODULE_9__public_img_mesmall_jpg___default.a,
+                transition: "all 1s linear"
+              })
+            )
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            ColumnSubHeading,
+            Column,
             null,
-            "I hope you enjoy your stay and please feel free to get to know me more and connect with me in the following social networks"
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              ColumnHeading,
+              { color: page.color },
+              "Welcome to my page"
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              ColumnSubHeading,
+              null,
+              "I hope you enjoy your stay and please feel free to get to know me more and connect with me in the following social networks"
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              ColumnSubHeading,
+              null,
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            )
           )
         )
-      )
-    ),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__SocialNetworks__["a" /* default */], null)
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_2_react_media___default.a,
+        { query: "(max-width: 1280px)" },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_0_react__["Fragment"],
+          null,
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            Row,
+            null,
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              ColumnHeading,
+              { color: page.color },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(StyledProgressiveImage, {
+                src: __WEBPACK_IMPORTED_MODULE_8__public_img_me_jpg___default.a,
+                placeholder: __WEBPACK_IMPORTED_MODULE_9__public_img_mesmall_jpg___default.a,
+                transition: "all 1s linear"
+              })
+            )
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            Row,
+            null,
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              ColumnHeading,
+              { color: page.color },
+              "Welcome to my page"
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              ColumnSubHeading,
+              null,
+              "I hope you enjoy your stay and please feel free to get to know me more and connect with me in the following social networks"
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              ColumnSubHeading,
+              null,
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            )
+          )
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__SocialNetworks__["a" /* default */], null)
+    )
   );
 });
 
@@ -1873,17 +1922,17 @@ function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return s
 
 
 
-var animation = Object(__WEBPACK_IMPORTED_MODULE_0_styled_components__["c" /* keyframes */])(_templateObject);
+var animation = Object(__WEBPACK_IMPORTED_MODULE_0_styled_components__["keyframes"])(_templateObject);
 
 /* harmony default export */ __webpack_exports__["a"] = (function (delay) {
   return "\n    animation: " + animation + " 0.3s;\n    animation-delay: " + delay + "s;\n    animation-fill-mode: forwards;\n    opacity: 0;\n  ";
 });
 
-var animIn = Object(__WEBPACK_IMPORTED_MODULE_0_styled_components__["c" /* keyframes */])(_templateObject2);
+var animIn = Object(__WEBPACK_IMPORTED_MODULE_0_styled_components__["keyframes"])(_templateObject2);
 
 var fadeIn = function fadeIn() {
   var delay = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
-  return Object(__WEBPACK_IMPORTED_MODULE_0_styled_components__["a" /* css */])(_templateObject3, animIn, delay);
+  return Object(__WEBPACK_IMPORTED_MODULE_0_styled_components__["css"])(_templateObject3, animIn, delay);
 };
 
 /***/ }),
@@ -2236,11 +2285,11 @@ function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return s
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   tablet: function tablet() {
-    return Object(__WEBPACK_IMPORTED_MODULE_0_styled_components__["a" /* css */])(_templateObject, __WEBPACK_IMPORTED_MODULE_0_styled_components__["a" /* css */].apply(undefined, arguments));
+    return Object(__WEBPACK_IMPORTED_MODULE_0_styled_components__["css"])(_templateObject, __WEBPACK_IMPORTED_MODULE_0_styled_components__["css"].apply(undefined, arguments));
   },
 
   phone: function phone() {
-    return Object(__WEBPACK_IMPORTED_MODULE_0_styled_components__["a" /* css */])(_templateObject2, __WEBPACK_IMPORTED_MODULE_0_styled_components__["a" /* css */].apply(undefined, arguments));
+    return Object(__WEBPACK_IMPORTED_MODULE_0_styled_components__["css"])(_templateObject2, __WEBPACK_IMPORTED_MODULE_0_styled_components__["css"].apply(undefined, arguments));
   }
 });
 
