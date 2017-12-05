@@ -1,33 +1,5 @@
 webpackJsonp([1],{
 
-/***/ "./public/img/cubes/code.png":
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "code.93b9404b.png";
-
-/***/ }),
-
-/***/ "./public/img/cubes/design.png":
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "design.0da24a32.png";
-
-/***/ }),
-
-/***/ "./public/img/cubes/github.png":
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "github.dd24e5cb.png";
-
-/***/ }),
-
-/***/ "./public/img/cubes/muhface.jpg":
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "muhface.391eb239.jpg";
-
-/***/ }),
-
 /***/ "./public/img/me.jpg":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -220,41 +192,37 @@ var Animation = function (_React$PureComponent) {
     var page = this.state.pages[this.state.pageIndex];
 
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      __WEBPACK_IMPORTED_MODULE_6__common_Relative__["a" /* default */],
+      "div",
       null,
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_7__common_Fullscreen__["a" /* default */],
+        __WEBPACK_IMPORTED_MODULE_6__common_Relative__["a" /* default */],
         null,
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__Background__["a" /* default */], {
-          pageIndex: this.state.pageIndex,
-          page: page,
-          setCanvas: this.setCanvas
-        }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          Container,
-          { horizontal: true },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__HomeTitle__["a" /* default */], { page: page }),
+          __WEBPACK_IMPORTED_MODULE_7__common_Fullscreen__["a" /* default */],
+          null,
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__Background__["a" /* default */], {
+            pageIndex: this.state.pageIndex,
+            page: page,
+            setCanvas: this.setCanvas
+          }),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_2_react_media___default.a,
-            { query: "(min-width: 1280px)" },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Cubes__["a" /* default */], {
-              canvas: this.state.canvas,
-              pages: this.state.pages,
-              page: page,
-              setPage: this.selectPage
-            })
+            Container,
+            { horizontal: true },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__HomeTitle__["a" /* default */], { page: page }),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              __WEBPACK_IMPORTED_MODULE_2_react_media___default.a,
+              { query: "(min-width: 1280px)" },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Cubes__["a" /* default */], {
+                canvas: this.state.canvas,
+                pages: this.state.pages,
+                page: page,
+                setPage: this.selectPage
+              })
+            )
           )
         )
       ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_8__common_flex_Centered__["a" /* default */],
-        { horizontal: true },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_9__common_flex_MaxWidth__["a" /* default */],
-          { width: 1280 },
-          page.render(page)
-        )
-      )
+      page.render(page)
     );
   };
 
@@ -359,10 +327,10 @@ var Background = function (_React$PureComponent) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_styled_components__ = __webpack_require__("./node_modules/styled-components/dist/styled-components.es.js");
-var _templateObject = _taggedTemplateLiteralLoose(["\n  width: ", "px;\n  height: ", "px;\n\n  * {\n    position: absolute;\n    width: ", "px;\n    height: ", "px;\n  }\n"], ["\n  width: ", "px;\n  height: ", "px;\n\n  * {\n    position: absolute;\n    width: ", "px;\n    height: ", "px;\n  }\n"]),
+var _templateObject = _taggedTemplateLiteralLoose(["\n  width: ", "px;\n  height: ", "px;\n\n  div {\n    position: absolute;\n    width: ", "px;\n    height: ", "px;\n  }\n"], ["\n  width: ", "px;\n  height: ", "px;\n\n  div {\n    position: absolute;\n    width: ", "px;\n    height: ", "px;\n  }\n"]),
     _templateObject2 = _taggedTemplateLiteralLoose(["\n  0% {\n    transform: rotateY(", "deg) rotateX(", "deg);\n  }\n  100% {\n    transform: rotateY(", "deg) rotateX(", "deg);\n  }\n"], ["\n  0% {\n    transform: rotateY(", "deg) rotateX(", "deg);\n  }\n  100% {\n    transform: rotateY(", "deg) rotateX(", "deg);\n  }\n"]),
-    _templateObject3 = _taggedTemplateLiteralLoose(["\n  ", ";\n  transform-style: preserve-3d;\n  will-change: transform;\n\n  * {\n    box-sizing: border-box;\n    background-color: ", ";\n    border: ", "px solid rgba(255, 255, 255, 0.4);\n  }\n"], ["\n  ", ";\n  transform-style: preserve-3d;\n  will-change: transform;\n\n  * {\n    box-sizing: border-box;\n    background-color: ", ";\n    border: ", "px solid rgba(255, 255, 255, 0.4);\n  }\n"]),
-    _templateObject4 = _taggedTemplateLiteralLoose(["\n  transform-origin: 50% 50%;\n  will-change: transform;\n  transform: ", " translateZ(", "px);\n  ", ";\n"], ["\n  transform-origin: 50% 50%;\n  will-change: transform;\n  transform: ", " translateZ(", "px);\n  ", ";\n"]);
+    _templateObject3 = _taggedTemplateLiteralLoose(["\n  ", ";\n  transform-style: preserve-3d;\n  will-change: transform;\n\n  div {\n    box-sizing: border-box;\n    background-color: ", ";\n    border: ", "px solid rgba(255, 255, 255, 0.4);\n  }\n"], ["\n  ", ";\n  transform-style: preserve-3d;\n  will-change: transform;\n\n  div {\n    box-sizing: border-box;\n    background-color: ", ";\n    border: ", "px solid rgba(255, 255, 255, 0.4);\n  }\n"]),
+    _templateObject4 = _taggedTemplateLiteralLoose(["\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  transform-origin: 50% 50%;\n  will-change: transform;\n  transform: ", " translateZ(", "px);\n\n  svg {\n    width: ", "px;\n    height: ", "px;\n    ", ";\n  }\n"], ["\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  transform-origin: 50% 50%;\n  will-change: transform;\n  transform: ", " translateZ(", "px);\n\n  svg {\n    width: ", "px;\n    height: ", "px;\n    ", ";\n  }\n"]);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -411,9 +379,14 @@ var Side = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].div(_templ
   var size = _ref5.size;
   return size / 2;
 }, function (_ref6) {
-  var image = _ref6.image,
-      size = _ref6.size;
-  return image && "\n    background-image: url(" + image + ");\n    background-repeat: no-repeat;\n    background-size: " + size * 0.75 + "px " + size * 0.75 + "px;\n    background-position: center;\n  ";
+  var size = _ref6.size;
+  return size * 0.75;
+}, function (_ref7) {
+  var size = _ref7.size;
+  return size * 0.75;
+}, function (_ref8) {
+  var inverse = _ref8.inverse;
+  return !inverse && "fill: white;";
 });
 
 var isSafari = typeof navigator !== "undefined" && /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
@@ -434,7 +407,8 @@ var GlowCube = function (_React$PureComponent) {
         size = _props$size === undefined ? 150 : _props$size,
         _props$color = _props.color,
         color = _props$color === undefined ? "rgba(242,119,119,0.5)" : _props$color,
-        image = _props.image,
+        icon = _props.icon,
+        inverse = _props.inverse,
         _props$speed = _props.speed,
         speed = _props$speed === undefined ? 1 : _props$speed,
         _props$offset = _props.offset,
@@ -457,42 +431,66 @@ var GlowCube = function (_React$PureComponent) {
           noAnimation: noAnimation,
           size: size
         },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Side, {
-          image: image,
-          style: { boxShadow: "0px 0px " + SHADOW_SIZE + "px " + color() },
-          rotate: "rotateX(90deg)",
-          size: size
-        }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Side, {
-          image: image,
-          style: { boxShadow: "0px 0px " + SHADOW_SIZE + "px " + color() },
-          rotate: "rotateX(-90deg)",
-          size: size
-        }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Side, {
-          image: image,
-          style: { boxShadow: "0px 0px " + SHADOW_SIZE + "px " + color() },
-          rotate: "rotateY(0deg)",
-          size: size
-        }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Side, {
-          image: image,
-          style: { boxShadow: "0px 0px " + SHADOW_SIZE + "px " + color() },
-          rotate: "rotateY(-180deg)",
-          size: size
-        }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Side, {
-          image: image,
-          style: { boxShadow: "0px 0px " + SHADOW_SIZE + "px " + color() },
-          rotate: "rotateY(-90deg)",
-          size: size
-        }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Side, {
-          image: image,
-          style: { boxShadow: "0px 0px " + SHADOW_SIZE + "px " + color() },
-          rotate: "rotateY(90deg)",
-          size: size
-        })
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          Side,
+          {
+            style: { boxShadow: "0px 0px " + SHADOW_SIZE + "px " + color() },
+            rotate: "rotateX(90deg)",
+            size: size,
+            inverse: inverse
+          },
+          icon
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          Side,
+          {
+            style: { boxShadow: "0px 0px " + SHADOW_SIZE + "px " + color() },
+            rotate: "rotateX(-90deg)",
+            size: size,
+            inverse: inverse
+          },
+          icon
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          Side,
+          {
+            style: { boxShadow: "0px 0px " + SHADOW_SIZE + "px " + color() },
+            rotate: "rotateY(0deg)",
+            size: size,
+            inverse: inverse
+          },
+          icon
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          Side,
+          {
+            style: { boxShadow: "0px 0px " + SHADOW_SIZE + "px " + color() },
+            rotate: "rotateY(-180deg)",
+            size: size,
+            inverse: inverse
+          },
+          icon
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          Side,
+          {
+            style: { boxShadow: "0px 0px " + SHADOW_SIZE + "px " + color() },
+            rotate: "rotateY(-90deg)",
+            size: size,
+            inverse: inverse
+          },
+          icon
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          Side,
+          {
+            style: { boxShadow: "0px 0px " + SHADOW_SIZE + "px " + color() },
+            rotate: "rotateY(90deg)",
+            size: size,
+            inverse: inverse
+          },
+          icon
+        )
       )
     );
   };
@@ -772,7 +770,8 @@ var Cubes = function (_React$PureComponent) {
             }
           },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Cube__["a" /* default */], {
-            image: page.page.Icon,
+            icon: page.page.Icon,
+            inverse: page.page.inverse,
             color: page.page.color,
             offset: page.offset,
             speed: 120,
@@ -1480,12 +1479,13 @@ var icons = [{
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_progressive_bg_image___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react_progressive_bg_image__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__SocialNetworks__ = __webpack_require__("./src/components/pages/AboutMe/SocialNetworks.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__common_flex_Centered__ = __webpack_require__("./src/components/common/flex/Centered.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__common_Headings__ = __webpack_require__("./src/components/common/Headings.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__common_links_Link__ = __webpack_require__("./src/components/common/links/Link.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__public_img_me_jpg__ = __webpack_require__("./public/img/me.jpg");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__public_img_me_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__public_img_me_jpg__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__public_img_mesmall_jpg__ = __webpack_require__("./public/img/mesmall.jpg");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__public_img_mesmall_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__public_img_mesmall_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__common_flex_MaxWidth__ = __webpack_require__("./src/components/common/flex/MaxWidth.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__common_Headings__ = __webpack_require__("./src/components/common/Headings.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__common_links_Link__ = __webpack_require__("./src/components/common/links/Link.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__public_img_me_jpg__ = __webpack_require__("./public/img/me.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__public_img_me_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__public_img_me_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__public_img_mesmall_jpg__ = __webpack_require__("./public/img/mesmall.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__public_img_mesmall_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__public_img_mesmall_jpg__);
 var _templateObject = _taggedTemplateLiteralLoose(["\n  color: ", ";\n  text-shadow: 0 0 50px ", ";\n"], ["\n  color: ", ";\n  text-shadow: 0 0 50px ", ";\n"]),
     _templateObject2 = _taggedTemplateLiteralLoose(["\n  flex: 1;\n  display: flex;\n  margin-right: 2rem;\n  flex-direction: column;\n"], ["\n  flex: 1;\n  display: flex;\n  margin-right: 2rem;\n  flex-direction: column;\n"]),
     _templateObject3 = _taggedTemplateLiteralLoose(["\n  display: flex;\n  position: relative;\n  margin-right: 2rem;\n  flex-direction: row;\n  flex-wrap: wrap;\n"], ["\n  display: flex;\n  position: relative;\n  margin-right: 2rem;\n  flex-direction: row;\n  flex-wrap: wrap;\n"]),
@@ -1494,6 +1494,7 @@ var _templateObject = _taggedTemplateLiteralLoose(["\n  color: ", ";\n  text-sha
     _templateObject6 = _taggedTemplateLiteralLoose(["\n  height: 500px;\n  background-size: contain;\n  background-position: center center;\n"], ["\n  height: 500px;\n  background-size: contain;\n  background-position: center center;\n"]);
 
 function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
+
 
 
 
@@ -1536,23 +1537,23 @@ var StyledProgressiveImage = Object(__WEBPACK_IMPORTED_MODULE_1_styled_component
   var page = _ref5.page;
 
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    "div",
-    null,
+    __WEBPACK_IMPORTED_MODULE_5__common_flex_Centered__["a" /* default */],
+    { horizontal: true },
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      __WEBPACK_IMPORTED_MODULE_5__common_flex_Centered__["a" /* default */],
-      { horizontal: true },
+      __WEBPACK_IMPORTED_MODULE_6__common_flex_MaxWidth__["a" /* default */],
+      { width: 1280 },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_6__common_Headings__["a" /* Heading */],
+        __WEBPACK_IMPORTED_MODULE_7__common_Headings__["a" /* Heading */],
         { color: page.color },
         "Hello! My name is Jo\xE3o Cunha"
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_6__common_Headings__["b" /* SubHeading */],
+        __WEBPACK_IMPORTED_MODULE_7__common_Headings__["b" /* SubHeading */],
         null,
         "I'm a Full-Stack developer working",
         " ",
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_7__common_links_Link__["b" /* default */],
+          __WEBPACK_IMPORTED_MODULE_8__common_links_Link__["b" /* default */],
           {
             color: page.color,
             href: "https://www.wiremaze.com/",
@@ -1612,8 +1613,8 @@ var StyledProgressiveImage = Object(__WEBPACK_IMPORTED_MODULE_1_styled_component
               ColumnHeading,
               { color: page.color },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(StyledProgressiveImage, {
-                src: __WEBPACK_IMPORTED_MODULE_8__public_img_me_jpg___default.a,
-                placeholder: __WEBPACK_IMPORTED_MODULE_9__public_img_mesmall_jpg___default.a,
+                src: __WEBPACK_IMPORTED_MODULE_9__public_img_me_jpg___default.a,
+                placeholder: __WEBPACK_IMPORTED_MODULE_10__public_img_mesmall_jpg___default.a,
                 transition: "all 1s linear"
               })
             )
@@ -1652,8 +1653,8 @@ var StyledProgressiveImage = Object(__WEBPACK_IMPORTED_MODULE_1_styled_component
               ColumnHeading,
               { color: page.color },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(StyledProgressiveImage, {
-                src: __WEBPACK_IMPORTED_MODULE_8__public_img_me_jpg___default.a,
-                placeholder: __WEBPACK_IMPORTED_MODULE_9__public_img_mesmall_jpg___default.a,
+                src: __WEBPACK_IMPORTED_MODULE_9__public_img_me_jpg___default.a,
+                placeholder: __WEBPACK_IMPORTED_MODULE_10__public_img_mesmall_jpg___default.a,
                 transition: "all 1s linear"
               })
             )
@@ -1683,6 +1684,267 @@ var StyledProgressiveImage = Object(__WEBPACK_IMPORTED_MODULE_1_styled_component
     )
   );
 });
+
+/***/ }),
+
+/***/ "./src/components/pages/MyProjects/Project.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_styled_components__ = __webpack_require__("./node_modules/styled-components/dist/styled-components.es.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_icons_lib_fa_github__ = __webpack_require__("./node_modules/react-icons/lib/fa/github.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_icons_lib_fa_github___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_icons_lib_fa_github__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_icons_lib_fa_star_o__ = __webpack_require__("./node_modules/react-icons/lib/fa/star-o.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_icons_lib_fa_star_o___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react_icons_lib_fa_star_o__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__theme__ = __webpack_require__("./src/theme/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_media__ = __webpack_require__("./src/utils/media.js");
+var _templateObject = _taggedTemplateLiteralLoose(["\n  display: flex;\n  flex-direction: column;\n  position: relative;\n  align-items: center;\n  text-align: center;\n  color: #1c2022;\n  margin: 0.5rem;\n  width: calc(25% - 2rem);\n  -moz-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);\n  -webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);\n  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);\n  padding: 0.5rem;\n\n  ", ";\n  ", ";\n\n  svg {\n    font-size: 2rem;\n    color: #1c2022;\n    font-weight: 400;\n    line-height: 1.4;\n    text-shadow: 0 1px 0px rgba(0, 0, 0, 0.3);\n  }\n"], ["\n  display: flex;\n  flex-direction: column;\n  position: relative;\n  align-items: center;\n  text-align: center;\n  color: #1c2022;\n  margin: 0.5rem;\n  width: calc(25% - 2rem);\n  -moz-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);\n  -webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);\n  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);\n  padding: 0.5rem;\n\n  ", ";\n  ", ";\n\n  svg {\n    font-size: 2rem;\n    color: #1c2022;\n    font-weight: 400;\n    line-height: 1.4;\n    text-shadow: 0 1px 0px rgba(0, 0, 0, 0.3);\n  }\n"]),
+    _templateObject2 = _taggedTemplateLiteralLoose(["\n  width: calc(50% - 2rem);\n"], ["\n  width: calc(50% - 2rem);\n"]),
+    _templateObject3 = _taggedTemplateLiteralLoose(["\n  width: 100%;\n"], ["\n  width: 100%;\n"]),
+    _templateObject4 = _taggedTemplateLiteralLoose(["\n  font-size: 1.125rem;\n  margin: 0.5rem 0;\n  text-decoration: none;\n  color: ", ";\n"], ["\n  font-size: 1.125rem;\n  margin: 0.5rem 0;\n  text-decoration: none;\n  color: ", ";\n"]),
+    _templateObject5 = _taggedTemplateLiteralLoose(["\n  color: #1c2022;\n  font-size: 1rem;\n  font-weight: 400;\n  line-height: 1.4;\n  text-shadow: 0 1px 0px rgba(0, 0, 0, 0.3);\n  max-width: 100%; /* IE11 */\n"], ["\n  color: #1c2022;\n  font-size: 1rem;\n  font-weight: 400;\n  line-height: 1.4;\n  text-shadow: 0 1px 0px rgba(0, 0, 0, 0.3);\n  max-width: 100%; /* IE11 */\n"]),
+    _templateObject6 = _taggedTemplateLiteralLoose(["\n  position: absolute;\n  top: 0.5rem;\n  right: 0.5rem;\n  padding: 0 5px;\n  background-image: linear-gradient(\n    45deg,\n    ", " 0%,\n    ", " 100%\n  );\n  font-weight: 700;\n  font-size: 0.875rem;\n  text-align: left;\n  color: white;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);\n  border-radius: 2px;\n"], ["\n  position: absolute;\n  top: 0.5rem;\n  right: 0.5rem;\n  padding: 0 5px;\n  background-image: linear-gradient(\n    45deg,\n    ", " 0%,\n    ", " 100%\n  );\n  font-weight: 700;\n  font-size: 0.875rem;\n  text-align: left;\n  color: white;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);\n  border-radius: 2px;\n"]),
+    _templateObject7 = _taggedTemplateLiteralLoose(["\n  display: block;\n  position: absolute;\n  top: 0.5rem;\n  left: 0.5rem;\n\n  svg {\n    fill: #ffeb3b;\n  }\n"], ["\n  display: block;\n  position: absolute;\n  top: 0.5rem;\n  left: 0.5rem;\n\n  svg {\n    fill: #ffeb3b;\n  }\n"]);
+
+function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
+
+
+
+
+
+
+// I should really put this in a provider but I'm lazy af
+
+
+
+var Container = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].div(_templateObject, __WEBPACK_IMPORTED_MODULE_5__utils_media__["a" /* default */].tablet(_templateObject2), __WEBPACK_IMPORTED_MODULE_5__utils_media__["a" /* default */].phone(_templateObject3));
+
+var Title = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].a(_templateObject4, function (props) {
+  return props.theme.secondary;
+});
+
+var Description = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].div(_templateObject5);
+
+var Lang = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].div(_templateObject6, function (props) {
+  return props.theme.secondary;
+}, function (props) {
+  return props.theme.secondary.darken(0.1);
+});
+
+var Stars = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].div(_templateObject7);
+
+/* harmony default export */ __webpack_exports__["a"] = (function (_ref) {
+  var project = _ref.project;
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    Container,
+    null,
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_icons_lib_fa_github___default.a, null),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      Title,
+      { href: project.html_url, target: "_blank", theme: __WEBPACK_IMPORTED_MODULE_4__theme__["b" /* default */] },
+      project.name
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      Lang,
+      { theme: __WEBPACK_IMPORTED_MODULE_4__theme__["b" /* default */] },
+      project.language
+    ),
+    parseInt(project.stargazers_count) > 0 && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      Stars,
+      null,
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_react_icons_lib_fa_star_o___default.a, null),
+      project.stargazers_count
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      Description,
+      { theme: __WEBPACK_IMPORTED_MODULE_4__theme__["b" /* default */] },
+      project.description
+    )
+  );
+});
+
+/***/ }),
+
+/***/ "./src/components/pages/MyProjects/index.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyProjects; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_joao_wm_github_JoaoCnh_github_io_node_modules_babel_runtime_regenerator__ = __webpack_require__("./node_modules/babel-runtime/regenerator/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_joao_wm_github_JoaoCnh_github_io_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__home_joao_wm_github_JoaoCnh_github_io_node_modules_babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__("./node_modules/react/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_styled_components__ = __webpack_require__("./node_modules/styled-components/dist/styled-components.es.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_icons_lib_fa_circle_o_notch__ = __webpack_require__("./node_modules/react-icons/lib/fa/circle-o-notch.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_icons_lib_fa_circle_o_notch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react_icons_lib_fa_circle_o_notch__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_icons_lib_fa_github__ = __webpack_require__("./node_modules/react-icons/lib/fa/github.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_icons_lib_fa_github___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_react_icons_lib_fa_github__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react_icons_lib_fa_fire__ = __webpack_require__("./node_modules/react-icons/lib/fa/fire.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react_icons_lib_fa_fire___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_react_icons_lib_fa_fire__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__common_flex_MaxWidth__ = __webpack_require__("./src/components/common/flex/MaxWidth.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__common_flex_Centered__ = __webpack_require__("./src/components/common/flex/Centered.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Project__ = __webpack_require__("./src/components/pages/MyProjects/Project.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__utils_media__ = __webpack_require__("./src/utils/media.js");
+
+
+var _templateObject = _taggedTemplateLiteralLoose(["\n  background-color: ", ";\n"], ["\n  background-color: ", ";\n"]),
+    _templateObject2 = _taggedTemplateLiteralLoose(["\n  text-align: center;\n  font-weight: 200;\n  font-size: 2.5rem;\n  margin-top: 6rem;\n  margin-bottom: 1rem;\n  text-transform: uppercase;\n  color: #1c2022;\n  text-shadow: 0 0 100px #3c4244;\n  ", ";\n"], ["\n  text-align: center;\n  font-weight: 200;\n  font-size: 2.5rem;\n  margin-top: 6rem;\n  margin-bottom: 1rem;\n  text-transform: uppercase;\n  color: #1c2022;\n  text-shadow: 0 0 100px #3c4244;\n  ", ";\n"]),
+    _templateObject3 = _taggedTemplateLiteralLoose(["margin-top: 3rem; margin-bottom: 0; "], ["margin-top: 3rem; margin-bottom: 0; "]),
+    _templateObject4 = _taggedTemplateLiteralLoose(["\n  display: flex;\n  flex-wrap: wrap;\n  margin-top: 2rem;\n  margin-bottom: 6rem;\n"], ["\n  display: flex;\n  flex-wrap: wrap;\n  margin-top: 2rem;\n  margin-bottom: 6rem;\n"]),
+    _templateObject5 = _taggedTemplateLiteralLoose(["\n  color: #1c2022;\n  font-size: 2rem;\n  margin-top: 5rem;\n  margin-bottom: 5rem;\n  margin-right: 1rem;\n  -webkit-animation: icon-spin 2s infinite linear;\n  animation: icon-spin 2s infinite linear;\n\n  @-webkit-keyframes icon-spin {\n    0% {\n      -webkit-transform: rotate(0deg);\n      transform: rotate(0deg);\n    }\n    100% {\n      -webkit-transform: rotate(359deg);\n      transform: rotate(359deg);\n    }\n  }\n\n  @keyframes icon-spin {\n    0% {\n      -webkit-transform: rotate(0deg);\n      transform: rotate(0deg);\n    }\n    100% {\n      -webkit-transform: rotate(359deg);\n      transform: rotate(359deg);\n    }\n  }\n"], ["\n  color: #1c2022;\n  font-size: 2rem;\n  margin-top: 5rem;\n  margin-bottom: 5rem;\n  margin-right: 1rem;\n  -webkit-animation: icon-spin 2s infinite linear;\n  animation: icon-spin 2s infinite linear;\n\n  @-webkit-keyframes icon-spin {\n    0% {\n      -webkit-transform: rotate(0deg);\n      transform: rotate(0deg);\n    }\n    100% {\n      -webkit-transform: rotate(359deg);\n      transform: rotate(359deg);\n    }\n  }\n\n  @keyframes icon-spin {\n    0% {\n      -webkit-transform: rotate(0deg);\n      transform: rotate(0deg);\n    }\n    100% {\n      -webkit-transform: rotate(359deg);\n      transform: rotate(359deg);\n    }\n  }\n"]),
+    _templateObject6 = _taggedTemplateLiteralLoose(["\n  width: 100%;\n  position: relative;\n  padding: 0.75rem 1.25rem;\n  margin-bottom: 5rem;\n  border: 1px solid transparent;\n  color: #721c24;\n  background-color: #f8d7da;\n  border-color: #f5c6cb;\n\n  h4 {\n    color: inherit;\n  }\n\n  p {\n    margin-top: 0;\n    margin-bottom: 1rem;\n  }\n"], ["\n  width: 100%;\n  position: relative;\n  padding: 0.75rem 1.25rem;\n  margin-bottom: 5rem;\n  border: 1px solid transparent;\n  color: #721c24;\n  background-color: #f8d7da;\n  border-color: #f5c6cb;\n\n  h4 {\n    color: inherit;\n  }\n\n  p {\n    margin-top: 0;\n    margin-bottom: 1rem;\n  }\n"]);
+
+function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+var Background = __WEBPACK_IMPORTED_MODULE_2_styled_components__["default"].div(_templateObject, function (props) {
+  return props.color();
+});
+
+var Heading = __WEBPACK_IMPORTED_MODULE_2_styled_components__["default"].h2(_templateObject2, __WEBPACK_IMPORTED_MODULE_9__utils_media__["a" /* default */].phone(_templateObject3));
+
+var Projects = __WEBPACK_IMPORTED_MODULE_2_styled_components__["default"].div(_templateObject4);
+
+var Loader = Object(__WEBPACK_IMPORTED_MODULE_2_styled_components__["default"])(__WEBPACK_IMPORTED_MODULE_3_react_icons_lib_fa_circle_o_notch___default.a)(_templateObject5);
+
+var NotMyFaultM8 = __WEBPACK_IMPORTED_MODULE_2_styled_components__["default"].div(_templateObject6);
+
+var MyProjects = function (_React$Component) {
+  _inherits(MyProjects, _React$Component);
+
+  function MyProjects() {
+    var _this2 = this;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, MyProjects);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, _React$Component.call.apply(_React$Component, [this].concat(args))), _this), _this.state = {
+      init: true,
+      loading: false,
+      projects: [],
+      error: false
+    }, _this.fetchProjects = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__home_joao_wm_github_JoaoCnh_github_io_node_modules_babel_runtime_regenerator___default.a.mark(function _callee() {
+      var res, json;
+      return __WEBPACK_IMPORTED_MODULE_0__home_joao_wm_github_JoaoCnh_github_io_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              _context.prev = 0;
+              _context.next = 3;
+              return fetch("https://api.github.com/users/JoaoCnh/repos");
+
+            case 3:
+              res = _context.sent;
+              _context.next = 6;
+              return res.json();
+
+            case 6:
+              json = _context.sent;
+
+
+              _this.setState({ error: false, loading: false, projects: json });
+              _context.next = 13;
+              break;
+
+            case 10:
+              _context.prev = 10;
+              _context.t0 = _context["catch"](0);
+
+              _this.setState({ error: true, loading: false });
+
+            case 13:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee, _this2, [[0, 10]]);
+    })), _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  MyProjects.prototype.componentDidMount = function componentDidMount() {
+    this.setState({ init: false, loading: true }, this.fetchProjects.bind(this));
+  };
+
+  MyProjects.prototype.render = function render() {
+    var page = this.props.page;
+    var _state = this.state,
+        init = _state.init,
+        loading = _state.loading,
+        projects = _state.projects,
+        error = _state.error;
+
+
+    if (init) {
+      return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("div", null);
+    }
+
+    return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+      Background,
+      { color: page.color },
+      __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_6__common_flex_MaxWidth__["a" /* default */],
+        { width: 1280 },
+        __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_7__common_flex_Centered__["a" /* default */],
+          { horizontal: true },
+          __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+            Heading,
+            null,
+            "These are my OS projects on Github"
+          ),
+          loading && __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(Loader, null),
+          error && __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+            NotMyFaultM8,
+            null,
+            __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+              "h4",
+              null,
+              __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5_react_icons_lib_fa_fire___default.a, null),
+              "Something at Github must be brewing"
+            )
+          )
+        ),
+        !error && projects.length > 0 && __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+          Projects,
+          null,
+          projects.map(function (project) {
+            return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__Project__["a" /* default */], { key: project.id, project: project });
+          })
+        )
+      )
+    );
+  };
+
+  return MyProjects;
+}(__WEBPACK_IMPORTED_MODULE_1_react___default.a.Component);
+
+
 
 /***/ }),
 
@@ -1729,15 +1991,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_pages_AboutMe__ = __webpack_require__("./src/components/pages/AboutMe/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__theme__ = __webpack_require__("./src/theme/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__public_img_cubes_muhface_jpg__ = __webpack_require__("./public/img/cubes/muhface.jpg");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__public_img_cubes_muhface_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__public_img_cubes_muhface_jpg__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__public_img_cubes_github_png__ = __webpack_require__("./public/img/cubes/github.png");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__public_img_cubes_github_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__public_img_cubes_github_png__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__public_img_cubes_code_png__ = __webpack_require__("./public/img/cubes/code.png");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__public_img_cubes_code_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__public_img_cubes_code_png__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__public_img_cubes_design_png__ = __webpack_require__("./public/img/cubes/design.png");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__public_img_cubes_design_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__public_img_cubes_design_png__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_pages_MyProjects__ = __webpack_require__("./src/components/pages/MyProjects/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__theme__ = __webpack_require__("./src/theme/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_icons_lib_md_fingerprint__ = __webpack_require__("./node_modules/react-icons/lib/md/fingerprint.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_icons_lib_md_fingerprint___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_react_icons_lib_md_fingerprint__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react_icons_lib_fa_github__ = __webpack_require__("./node_modules/react-icons/lib/fa/github.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react_icons_lib_fa_github___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_react_icons_lib_fa_github__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react_icons_lib_fa_code__ = __webpack_require__("./node_modules/react-icons/lib/fa/code.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react_icons_lib_fa_code___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_react_icons_lib_fa_code__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react_icons_lib_fa_html5__ = __webpack_require__("./node_modules/react-icons/lib/fa/html5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react_icons_lib_fa_html5___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_react_icons_lib_fa_html5__);
+
+
 
 
 
@@ -1752,8 +2017,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var aboutMe = {
   name: "about-me",
   niceName: "About me",
-  Icon: __WEBPACK_IMPORTED_MODULE_3__public_img_cubes_muhface_jpg___default.a,
-  color: Object(__WEBPACK_IMPORTED_MODULE_2__theme__["a" /* decorateSelector */])(function () {
+  Icon: __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_react_icons_lib_md_fingerprint___default.a, null),
+  color: Object(__WEBPACK_IMPORTED_MODULE_3__theme__["a" /* decorateSelector */])(function () {
     return "#6CAEDD";
   }),
   render: function render(page) {
@@ -1764,20 +2029,21 @@ var aboutMe = {
 var myProjects = {
   name: "my-projects",
   niceName: "My projects",
-  Icon: __WEBPACK_IMPORTED_MODULE_4__public_img_cubes_github_png___default.a,
-  color: Object(__WEBPACK_IMPORTED_MODULE_2__theme__["a" /* decorateSelector */])(function () {
+  Icon: __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5_react_icons_lib_fa_github___default.a, null),
+  inverse: true,
+  color: Object(__WEBPACK_IMPORTED_MODULE_3__theme__["a" /* decorateSelector */])(function () {
     return "#F9FBFF";
   }),
   render: function render(page) {
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__components_pages_AboutMe__["a" /* default */], { page: page });
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_pages_MyProjects__["a" /* default */], { page: page });
   }
 };
 
 var MyExperience = {
   name: "my-experience",
   niceName: "My experience",
-  Icon: __WEBPACK_IMPORTED_MODULE_5__public_img_cubes_code_png___default.a,
-  color: Object(__WEBPACK_IMPORTED_MODULE_2__theme__["a" /* decorateSelector */])(function () {
+  Icon: __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6_react_icons_lib_fa_code___default.a, null),
+  color: Object(__WEBPACK_IMPORTED_MODULE_3__theme__["a" /* decorateSelector */])(function () {
     return "#41B883";
   }),
   render: function render(page) {
@@ -1788,8 +2054,8 @@ var MyExperience = {
 var whateverMe = {
   name: "this-design",
   niceName: "This design",
-  Icon: __WEBPACK_IMPORTED_MODULE_6__public_img_cubes_design_png___default.a,
-  color: Object(__WEBPACK_IMPORTED_MODULE_2__theme__["a" /* decorateSelector */])(function () {
+  Icon: __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7_react_icons_lib_fa_html5___default.a, null),
+  color: Object(__WEBPACK_IMPORTED_MODULE_3__theme__["a" /* decorateSelector */])(function () {
     return "#FF9800";
   }),
   render: function render(page) {
@@ -1904,7 +2170,7 @@ var theme = createTheme({
   red: "#F27777"
 });
 
-/* unused harmony default export */ var _unused_webpack_default_export = (theme);
+/* harmony default export */ __webpack_exports__["b"] = (theme);
 
 /***/ }),
 
