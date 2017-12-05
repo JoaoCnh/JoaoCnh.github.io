@@ -43,7 +43,7 @@ const Side = styled.div`
   transform-origin: 50% 50%;
   will-change: transform;
   transform: ${({ rotate }) => rotate} translateZ(${({ size }) => size / 2}px);
-  ${({ image, size, color }) =>
+  ${({ image, size }) =>
     image &&
     `
     background-image: url(${image});
@@ -83,42 +83,36 @@ export default class GlowCube extends React.PureComponent {
         >
           <Side
             image={image}
-            color={color}
             style={{ boxShadow: `0px 0px ${SHADOW_SIZE}px ${color()}` }}
             rotate="rotateX(90deg)"
             size={size}
           />
           <Side
             image={image}
-            color={color}
             style={{ boxShadow: `0px 0px ${SHADOW_SIZE}px ${color()}` }}
             rotate="rotateX(-90deg)"
             size={size}
           />
           <Side
             image={image}
-            color={color}
             style={{ boxShadow: `0px 0px ${SHADOW_SIZE}px ${color()}` }}
             rotate="rotateY(0deg)"
             size={size}
           />
           <Side
             image={image}
-            color={color}
             style={{ boxShadow: `0px 0px ${SHADOW_SIZE}px ${color()}` }}
             rotate="rotateY(-180deg)"
             size={size}
           />
           <Side
             image={image}
-            color={color}
             style={{ boxShadow: `0px 0px ${SHADOW_SIZE}px ${color()}` }}
             rotate="rotateY(-90deg)"
             size={size}
           />
           <Side
             image={image}
-            color={color}
             style={{ boxShadow: `0px 0px ${SHADOW_SIZE}px ${color()}` }}
             rotate="rotateY(90deg)"
             size={size}

@@ -8,8 +8,8 @@ import Background from "./Background";
 
 import Relative from "./common/Relative";
 import Fullscreen from "./common/Fullscreen";
-import Centered from "./common/Centered";
-import MaxWidth from "./common/MaxWidth";
+import Centered from "./common/flex/Centered";
+import MaxWidth from "./common/flex/MaxWidth";
 
 import * as pages from "../pages";
 import getScrollPos from "../utils/scroll";

@@ -28,9 +28,9 @@ export default class Background extends React.PureComponent {
   // Use solid colors for perf
   colors = {
     "about-me": "#1E2428",
-    "my-projects": "#1D2525",
-    "where-to-find-me": "#202328",
-    "whatever-me": "#202022"
+    "my-projects": "#3E3F40",
+    "my-experience": "#1D2525",
+    "this-design": "#261700"
   };
 
   render() {

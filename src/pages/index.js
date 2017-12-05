@@ -4,10 +4,10 @@ import AboutMe from "../components/pages/AboutMe";
 import { decorateSelector } from "../theme";
 
 // images
-import MuhFaceImg from "../../public/muhface.jpg";
-import GithubImg from "../../public/github.png";
-import CodeImg from "../../public/code.png";
-import DesignImg from "../../public/design.png";
+import MuhFaceImg from "../../public/img/cubes/muhface.jpg";
+import GithubImg from "../../public/img/cubes/github.png";
+import CodeImg from "../../public/img/cubes/code.png";
+import DesignImg from "../../public/img/cubes/design.png";
 
 export const aboutMe = {
   name: "about-me",
