@@ -83,29 +83,29 @@ export default class Animation extends React.PureComponent {
     const page = this.state.pages[this.state.pageIndex];
 
     return (
-      <Relative>
-        <Fullscreen>
-          <Background
-            pageIndex={this.state.pageIndex}
-            page={page}
-            setCanvas={this.setCanvas}
-          />
-          <Container horizontal>
-            <HomeTitle page={page} />
-            <Media query="(min-width: 1280px)">
-              <Cubes
-                canvas={this.state.canvas}
-                pages={this.state.pages}
-                page={page}
-                setPage={this.selectPage}
-              />
-            </Media>
-          </Container>
-        </Fullscreen>
-        <Centered horizontal>
-          <MaxWidth width={1280}>{page.render(page)}</MaxWidth>
-        </Centered>
-      </Relative>
+      <div>
+        <Relative>
+          <Fullscreen>
+            <Background
+              pageIndex={this.state.pageIndex}
+              page={page}
+              setCanvas={this.setCanvas}
+            />
+            <Container horizontal>
+              <HomeTitle page={page} />
+              <Media query="(min-width: 1280px)">
+                <Cubes
+                  canvas={this.state.canvas}
+                  pages={this.state.pages}
+                  page={page}
+                  setPage={this.selectPage}
+                />
+              </Media>
+            </Container>
+          </Fullscreen>
+        </Relative>
+        {page.render(page)}
+      </div>
     );
   }
 }

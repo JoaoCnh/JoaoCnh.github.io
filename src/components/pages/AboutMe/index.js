@@ -5,6 +5,7 @@ import ProgressiveImage from "react-progressive-bg-image";
 
 import SocialNetworks from "./SocialNetworks";
 import Centered from "../../common/flex/Centered";
+import MaxWidth from "../../common/flex/MaxWidth";
 import { Heading, SubHeading } from "../../common/Headings";
 import Link from "../../common/links/Link";
 
@@ -68,8 +69,8 @@ const StyledProgressiveImage = styled(ProgressiveImage)`
 
 export default ({ page }) => {
   return (
-    <div>
-      <Centered horizontal>
+    <Centered horizontal>
+      <MaxWidth width={1280}>
         <Heading color={page.color}>Hello! My name is João Cunha</Heading>
         <SubHeading>
           I'm a Full-Stack developer working{" "}
@@ -154,7 +155,7 @@ export default ({ page }) => {
         </Media>
 
         <SocialNetworks />
-      </Centered>
-    </div>
+      </MaxWidth>
+    </Centered>
   );
 };

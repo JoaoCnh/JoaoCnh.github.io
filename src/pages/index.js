@@ -1,5 +1,7 @@
 import React from "react";
+
 import AboutMe from "../components/pages/AboutMe";
+import MyProjects from "../components/pages/MyProjects";
 
 import { decorateSelector } from "../theme";
 
@@ -22,7 +24,7 @@ export const myProjects = {
   niceName: "My projects",
   Icon: GithubImg,
   color: decorateSelector(() => "#F9FBFF"),
-  render: page => <AboutMe page={page} />
+  render: page => <MyProjects page={page} />
 };
 
 export const MyExperience = {
