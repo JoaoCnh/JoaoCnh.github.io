@@ -233,7 +233,8 @@ export default class Cubes extends React.PureComponent {
               onClick={() => this.props.setPage(page.page)}
             >
               <Cube
-                image={page.page.Icon}
+                icon={page.page.Icon}
+                inverse={page.page.inverse}
                 color={page.page.color}
                 offset={page.offset}
                 speed={120}

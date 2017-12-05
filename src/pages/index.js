@@ -6,15 +6,15 @@ import MyProjects from "../components/pages/MyProjects";
 import { decorateSelector } from "../theme";
 
 // images
-import MuhFaceImg from "../../public/img/cubes/muhface.jpg";
-import GithubImg from "../../public/img/cubes/github.png";
-import CodeImg from "../../public/img/cubes/code.png";
-import DesignImg from "../../public/img/cubes/design.png";
+import MdFingerprint from "react-icons/lib/md/fingerprint";
+import FaGithub from "react-icons/lib/fa/github";
+import FaCode from "react-icons/lib/fa/code";
+import FaHtml5 from "react-icons/lib/fa/html5";
 
 export const aboutMe = {
   name: "about-me",
   niceName: "About me",
-  Icon: MuhFaceImg,
+  Icon: <MdFingerprint />,
   color: decorateSelector(() => "#6CAEDD"),
   render: page => <AboutMe page={page} />
 };
@@ -22,7 +22,8 @@ export const aboutMe = {
 export const myProjects = {
   name: "my-projects",
   niceName: "My projects",
-  Icon: GithubImg,
+  Icon: <FaGithub />,
+  inverse: true,
   color: decorateSelector(() => "#F9FBFF"),
   render: page => <MyProjects page={page} />
 };
@@ -30,7 +31,7 @@ export const myProjects = {
 export const MyExperience = {
   name: "my-experience",
   niceName: "My experience",
-  Icon: CodeImg,
+  Icon: <FaCode />,
   color: decorateSelector(() => "#41B883"),
   render: page => <AboutMe page={page} />
 };
@@ -38,7 +39,7 @@ export const MyExperience = {
 export const whateverMe = {
   name: "this-design",
   niceName: "This design",
-  Icon: DesignImg,
+  Icon: <FaHtml5 />,
   color: decorateSelector(() => "#FF9800"),
   render: page => <AboutMe page={page} />
 };

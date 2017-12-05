@@ -5,7 +5,7 @@ const Cube = styled.div`
   width: ${props => props.size + 1}px;
   height: ${props => props.size + 1}px;
 
-  * {
+  div {
     position: absolute;
     width: ${props => props.size + 1}px;
     height: ${props => props.size + 1}px;
@@ -32,7 +32,7 @@ const Sides = styled.div`
   transform-style: preserve-3d;
   will-change: transform;
 
-  * {
+  div {
     box-sizing: border-box;
     background-color: ${({ color }) => color.clearer(0.2)};
     border: ${({ size }) => size / 70}px solid rgba(255, 255, 255, 0.4);
@@ -40,17 +40,18 @@ const Sides = styled.div`
 `;
 
 const Side = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transform-origin: 50% 50%;
   will-change: transform;
   transform: ${({ rotate }) => rotate} translateZ(${({ size }) => size / 2}px);
-  ${({ image, size }) =>
-    image &&
-    `
-    background-image: url(${image});
-    background-repeat: no-repeat;
-    background-size: ${size * 0.75}px ${size * 0.75}px;
-    background-position: center;
-  `};
+
+  svg {
+    width: ${({ size }) => size * 0.75}px;
+    height: ${({ size }) => size * 0.75}px;
+    ${({ inverse }) => !inverse && `fill: white;`};
+  }
 `;
 
 const isSafari =
@@ -63,7 +64,8 @@ export default class GlowCube extends React.PureComponent {
     const {
       size = 150,
       color = "rgba(242,119,119,0.5)",
-      image,
+      icon,
+      inverse,
       speed = 1,
       offset = 0,
       noAnimation,
@@ -82,41 +84,53 @@ export default class GlowCube extends React.PureComponent {
           size={size}
         >
           <Side
-            image={image}
             style={{ boxShadow: `0px 0px ${SHADOW_SIZE}px ${color()}` }}
             rotate="rotateX(90deg)"
             size={size}
-          />
+            inverse={inverse}
+          >
+            {icon}
+          </Side>
           <Side
-            image={image}
             style={{ boxShadow: `0px 0px ${SHADOW_SIZE}px ${color()}` }}
             rotate="rotateX(-90deg)"
             size={size}
-          />
+            inverse={inverse}
+          >
+            {icon}
+          </Side>
           <Side
-            image={image}
             style={{ boxShadow: `0px 0px ${SHADOW_SIZE}px ${color()}` }}
             rotate="rotateY(0deg)"
             size={size}
-          />
+            inverse={inverse}
+          >
+            {icon}
+          </Side>
           <Side
-            image={image}
             style={{ boxShadow: `0px 0px ${SHADOW_SIZE}px ${color()}` }}
             rotate="rotateY(-180deg)"
             size={size}
-          />
+            inverse={inverse}
+          >
+            {icon}
+          </Side>
           <Side
-            image={image}
             style={{ boxShadow: `0px 0px ${SHADOW_SIZE}px ${color()}` }}
             rotate="rotateY(-90deg)"
             size={size}
-          />
+            inverse={inverse}
+          >
+            {icon}
+          </Side>
           <Side
-            image={image}
             style={{ boxShadow: `0px 0px ${SHADOW_SIZE}px ${color()}` }}
             rotate="rotateY(90deg)"
             size={size}
-          />
+            inverse={inverse}
+          >
+            {icon}
+          </Side>
         </Sides>
       </Cube>
     );
