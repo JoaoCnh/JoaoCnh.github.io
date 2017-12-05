@@ -102,7 +102,9 @@ export default class Animation extends React.PureComponent {
             </Media>
           </Container>
         </Fullscreen>
-        <MaxWidth width={1280}>{page.render(page)}</MaxWidth>
+        <Centered horizontal>
+          <MaxWidth width={1280}>{page.render(page)}</MaxWidth>
+        </Centered>
       </Relative>
     );
   }

@@ -1,11 +1,15 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
 import Media from "react-media";
+import ProgressiveImage from "react-progressive-bg-image";
 
 import SocialNetworks from "./SocialNetworks";
 import Centered from "../../common/flex/Centered";
 import { Heading, SubHeading } from "../../common/Headings";
 import Link from "../../common/links/Link";
+
+import meImg from "../../../../public/img/me.jpg";
+import meSmallImg from "../../../../public/img/mesmall.jpg";
 
 const Text = styled.span`
   color: ${({ color }) => color()};
@@ -56,6 +60,12 @@ const ColumnSubHeading = styled.p`
   font-size: 1.8rem;
 `;
 
+const StyledProgressiveImage = styled(ProgressiveImage)`
+  height: 500px;
+  background-size: contain;
+  background-position: center center;
+`;
+
 export default ({ page }) => {
   return (
     <div>
@@ -78,39 +88,73 @@ export default ({ page }) => {
           <Text color={page.color}>Video-Games</Text> and{" "}
           <Text color={page.color}>Programming</Text>.
         </SubHeading>
+
+        <Media query="(min-width: 1280px)">
+          <Row>
+            <Column>
+              <ColumnHeading color={page.color}>
+                <StyledProgressiveImage
+                  src={meImg}
+                  placeholder={meSmallImg}
+                  transition="all 1s linear"
+                />
+              </ColumnHeading>
+            </Column>
+            <Column>
+              <ColumnHeading color={page.color}>
+                Welcome to my page
+              </ColumnHeading>
+              <ColumnSubHeading>
+                I hope you enjoy your stay and please feel free to get to know
+                me more and connect with me in the following social networks
+              </ColumnSubHeading>
+              <ColumnSubHeading>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </ColumnSubHeading>
+            </Column>
+          </Row>
+        </Media>
+
+        <Media query="(max-width: 1280px)">
+          <Fragment>
+            <Row>
+              <ColumnHeading color={page.color}>
+                <StyledProgressiveImage
+                  src={meImg}
+                  placeholder={meSmallImg}
+                  transition="all 1s linear"
+                />
+              </ColumnHeading>
+            </Row>
+            <Row>
+              <ColumnHeading color={page.color}>
+                Welcome to my page
+              </ColumnHeading>
+              <ColumnSubHeading>
+                I hope you enjoy your stay and please feel free to get to know
+                me more and connect with me in the following social networks
+              </ColumnSubHeading>
+              <ColumnSubHeading>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </ColumnSubHeading>
+            </Row>
+          </Fragment>
+        </Media>
+
+        <SocialNetworks />
       </Centered>
-
-      <Media query="(min-width: 1280px)">
-        <Row>
-          <Column>
-            <ColumnHeading color={page.color}>setup img</ColumnHeading>
-          </Column>
-          <Column>
-            <ColumnHeading color={page.color}>Welcome to my page</ColumnHeading>
-            <ColumnSubHeading>
-              I hope you enjoy your stay and please feel free to get to know me
-              more and connect with me in the following social networks
-            </ColumnSubHeading>
-          </Column>
-        </Row>
-      </Media>
-
-      <Media query="(max-width: 1280px)">
-        <Fragment>
-          <Row>
-            <ColumnHeading color={page.color}>setup img</ColumnHeading>
-          </Row>
-          <Row>
-            <ColumnHeading color={page.color}>Welcome to my page</ColumnHeading>
-            <ColumnSubHeading>
-              I hope you enjoy your stay and please feel free to get to know me
-              more and connect with me in the following social networks
-            </ColumnSubHeading>
-          </Row>
-        </Fragment>
-      </Media>
-
-      <SocialNetworks />
     </div>
   );
 };

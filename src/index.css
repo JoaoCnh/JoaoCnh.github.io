@@ -4,14 +4,25 @@ body,
   height: 100%;
 }
 
-body {
-  font-family: "Source Sans Pro";
-  margin: 0;
-  padding: 0;
-  background: #1c2022;
-}
-
-.App {
+#app {
   max-width: 100vw;
   overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  min-height: 100%;
+  background: #1c2022;
+  color: hsla(0, 0%, 0%, 0.8);
+  font-family: "Source Sans Pro";
+  font-weight: normal;
+  word-wrap: break-word;
+  font-kerning: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
 }
