@@ -2,6 +2,7 @@ import React from "react";
 
 import AboutMe from "../components/pages/AboutMe";
 import MyProjects from "../components/pages/MyProjects";
+import MyExperience from "../components/pages/MyExperience";
 
 import { decorateSelector } from "../theme";
 
@@ -28,15 +29,15 @@ export const myProjects = {
   render: page => <MyProjects page={page} />
 };
 
-export const MyExperience = {
+export const myExperience = {
   name: "my-experience",
   niceName: "My experience",
   Icon: <FaCode />,
   color: decorateSelector(() => "#41B883"),
-  render: page => <AboutMe page={page} />
+  render: page => <MyExperience page={page} />
 };
 
-export const whateverMe = {
+export const thisDesign = {
   name: "this-design",
   niceName: "This design",
   Icon: <FaHtml5 />,
@@ -55,9 +56,9 @@ export default function getDefinition(theme) {
       return aboutMe;
     case myProjects.name:
       return myProjects;
-    case MyExperience.name:
-      return MyExperience;
-    case whateverMe.name:
-      return whateverMe;
+    case myExperience.name:
+      return myExperience;
+    case thisDesign.name:
+      return thisDesign;
   }
 }

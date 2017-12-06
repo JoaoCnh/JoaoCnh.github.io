@@ -123,7 +123,7 @@ export default class MyProjects extends React.Component {
       <Background color={page.color}>
         <MaxWidth width={1280}>
           <Centered horizontal>
-            <Heading>These are my OS projects on Github</Heading>
+            <Heading>These are my OSS projects on Github</Heading>
             {loading && <Loader />}
             {error && (
               <NotMyFaultM8>
