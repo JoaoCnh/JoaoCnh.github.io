@@ -34,7 +34,7 @@ const Sides = styled.div`
 
   div {
     box-sizing: border-box;
-    background-color: ${({ color }) => color.clearer(0.2)};
+    background-color: ${({ sideColor }) => sideColor.clearer(0.2)};
     border: ${({ size }) => size / 70}px solid rgba(255, 255, 255, 0.4);
   }
 `;
@@ -77,7 +77,7 @@ export default class GlowCube extends React.PureComponent {
     return (
       <Cube id={id} innerRef={ref} className={className} size={size}>
         <Sides
-          color={color}
+          sideColor={color}
           offset={offset}
           speed={speed}
           noAnimation={noAnimation}

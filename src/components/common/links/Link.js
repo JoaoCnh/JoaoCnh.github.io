@@ -3,8 +3,8 @@ import styled from "styled-components";
 import MdLink from "react-icons/lib/md/link";
 
 const Link = styled.a`
-  color: ${({ color }) => color()};
-  text-shadow: 0 0 50px ${({ color }) => color.clearer(0.6)};
+  color: ${({ linkColor }) => linkColor()};
+  text-shadow: 0 0 50px ${({ linkColor }) => linkColor.clearer(0.6)};
   text-decoration: none;
 `;
 

@@ -13,8 +13,8 @@ import meImg from "../../../../public/img/me.jpg";
 import meSmallImg from "../../../../public/img/mesmall.jpg";
 
 const Text = styled.span`
-  color: ${({ color }) => color()};
-  text-shadow: 0 0 50px ${({ color }) => color.clearer(0.6)};
+  color: ${({ textColor }) => textColor()};
+  text-shadow: 0 0 50px ${({ textColor }) => textColor.clearer(0.6)};
 `;
 
 const Column = styled.div`
@@ -33,8 +33,8 @@ const Row = styled.div`
 `;
 
 const ColumnHeading = styled.h3`
-  color: ${({ color }) => color()};
-  text-shadow: 0 0 50px ${({ color }) => color.clearer(0.6)};
+  color: ${({ headingColor }) => headingColor()};
+  text-shadow: 0 0 50px ${({ headingColor }) => headingColor.clearer(0.6)};
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -71,11 +71,13 @@ export default ({ page }) => {
   return (
     <Centered horizontal>
       <MaxWidth width={1280}>
-        <Heading color={page.color}>Hello! My name is João Cunha</Heading>
+        <Heading headingColor={page.color}>
+          Hello! My name is João Cunha
+        </Heading>
         <SubHeading>
           I'm a Full-Stack developer working{" "}
           <Link
-            color={page.color}
+            linkColor={page.color}
             href="https://www.wiremaze.com/"
             target="_blank"
           >
@@ -84,17 +86,17 @@ export default ({ page }) => {
           in Porto, Portugal.
         </SubHeading>
         <SubHeading>
-          I love <Text color={page.color}>Music</Text>,{" "}
-          <Text color={page.color}>Movies</Text>,{" "}
-          <Text color={page.color}>Sports</Text>,{" "}
-          <Text color={page.color}>Video-Games</Text> and{" "}
-          <Text color={page.color}>Programming</Text>.
+          I love <Text textColor={page.color}>Music</Text>,{" "}
+          <Text textColor={page.color}>Movies</Text>,{" "}
+          <Text textColor={page.color}>Sports</Text>,{" "}
+          <Text textColor={page.color}>Video-Games</Text> and{" "}
+          <Text textColor={page.color}>Programming</Text>.
         </SubHeading>
 
         <Media query="(min-width: 1280px)">
           <Row>
             <Column>
-              <ColumnHeading color={page.color}>
+              <ColumnHeading headingColor={page.color}>
                 <StyledProgressiveImage
                   src={meImg}
                   placeholder={meSmallImg}
@@ -103,7 +105,7 @@ export default ({ page }) => {
               </ColumnHeading>
             </Column>
             <Column>
-              <ColumnHeading color={page.color}>
+              <ColumnHeading headingColor={page.color}>
                 Welcome to my page
               </ColumnHeading>
               <ColumnSubHeading>
@@ -126,7 +128,7 @@ export default ({ page }) => {
         <Media query="(max-width: 1280px)">
           <Fragment>
             <Row>
-              <ColumnHeading color={page.color}>
+              <ColumnHeading headingColor={page.color}>
                 <StyledProgressiveImage
                   src={meImg}
                   placeholder={meSmallImg}
@@ -135,7 +137,7 @@ export default ({ page }) => {
               </ColumnHeading>
             </Row>
             <Row>
-              <ColumnHeading color={page.color}>
+              <ColumnHeading headingColor={page.color}>
                 Welcome to my page
               </ColumnHeading>
               <ColumnSubHeading>

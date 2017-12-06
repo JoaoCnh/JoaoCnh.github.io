@@ -17,6 +17,7 @@ import Golang from "../components/common/langs/Golang";
 import Express from "../components/common/langs/Express";
 import Android from "../components/common/langs/Android";
 import Webpack from "../components/common/langs/Webpack";
+import Laravel from "../components/common/langs/Laravel";
 import Bootstrap from "../components/common/langs/Bootstrap";
 import Javascript from "../components/common/langs/Javascript";
 import { default as ReactLogo } from "../components/common/langs/React";
@@ -99,6 +100,9 @@ export const langIcon = (lang, props) => {
     case "php":
     case "shit": // AIR HORN SOUND!!!! PS: It's a fokin joke
       return <Php {...props} />;
+    // Laravel
+    case "laravel":
+      return <Laravel {...props} />;
     // Webpack
     case "webpack":
       return <Webpack {...props} />;

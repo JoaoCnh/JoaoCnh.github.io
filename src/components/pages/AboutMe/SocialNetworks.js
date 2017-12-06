@@ -16,7 +16,7 @@ const Container = styled.div`
   transition: 0.3s ease box-shadow;
   border-radius: 2px;
   background-color: ${({ theme }) => theme.background};
-  box-shadow: 0 3px 200px ${({ color }) => color.clearer(0.8)};
+  box-shadow: 0 3px 200px ${({ containerColor }) => containerColor.clearer(0.8)};
   display: flex;
   flex-direction: row;
   flex: 1;
@@ -154,7 +154,7 @@ export default class SocialNetworks extends React.Component {
               </IconContainer>
             ))}
           </Icons>
-          <Container color={network.color}>
+          <Container containerColor={network.color}>
             <Centered horizontal>
               <RollingText
                 style={{
@@ -164,7 +164,11 @@ export default class SocialNetworks extends React.Component {
                 }}
                 updateCheck={network}
               >
-                <Link color={network.color} href={network.link} target="_blank">
+                <Link
+                  linkColor={network.color}
+                  href={network.link}
+                  target="_blank"
+                >
                   <LinkIcon />
                   {network.value}
                 </Link>

@@ -14,8 +14,8 @@ const Heading = styled.h2`
 margin-top: 3rem;
 margin-bottom: 0;
 `};
-  color: ${({ color }) => color()};
-  text-shadow: 0 0 50px ${({ color }) => color.clearer(0.6)};
+  color: ${({ headingColor }) => headingColor()};
+  text-shadow: 0 0 50px ${({ headingColor }) => headingColor.clearer(0.6)};
 `;
 
 const SubHeading = styled.p`

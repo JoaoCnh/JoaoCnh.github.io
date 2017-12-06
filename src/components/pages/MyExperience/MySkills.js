@@ -1,56 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
+import { SubHeading } from "../../common/Headings";
+
 import media from "../../../utils/media";
 import { langIcon } from "../../../utils/lang";
+import { skills, otherSkills } from "./skills";
 
-export const skills = [
-  {
-    key: "js",
-    name: "Javascript",
-    value: 3
-  },
-  {
-    key: "react",
-    name: "React",
-    value: 3
-  },
-  {
-    key: "css",
-    name: "CSS",
-    value: 1
-  },
-  {
-    key: "sass",
-    name: "Sass",
-    value: 1
-  },
-  {
-    key: "html",
-    name: "Html",
-    value: 5
-  },
-  {
-    key: "gulp",
-    name: "Gulp",
-    value: 1
-  },
-  {
-    key: "webpack",
-    name: "Webpack",
-    value: 1
-  },
-  {
-    key: "ruby",
-    name: "Ruby",
-    value: 2
-  },
-  {
-    key: "rails",
-    name: "Rails",
-    value: 2
-  }
-];
+const Container = styled.div`
+  margin-bottom: 5rem;
+`;
 
 const Skills = styled.div`
   display: flex;
@@ -58,15 +17,21 @@ const Skills = styled.div`
   flex-wrap: wrap;
   margin-top: 3rem;
 
-  ${media.tablet`justify-content: space-evenly;`};
+  ${media.tablet`
+    justify-content: space-evenly;
+    margin-top: 0;
+  `};
+`;
+
+const SkillGap = styled.hr`
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid ${({ skillColor }) => skillColor.clearer(0.9)};
+  background: transparent;
 `;
 
 const SkillSection = styled.div`
   width: 100px;
-
-  &:hover {
-    cursor: pointer;
-  }
 
   ${media.phone`margin-top: 3rem;`};
   ${media.tablet`margin-top: 3rem;`};
@@ -82,7 +47,8 @@ const SkillBar = styled.li`
   position: relative;
   margin-bottom: 10px;
   padding: 5px;
-  background: ${({ fill, color }) => (fill ? color : `#ccc`)};
+  background: ${({ shouldFill, skillColor }) =>
+    shouldFill ? skillColor : `#9a9a9a`};
   -webkit-transition: all ${({ delay }) => delay}s ease;
   -moz-transition: all ${({ delay }) => delay}s ease;
   transition: all ${({ delay }) => delay}s ease;
@@ -97,10 +63,16 @@ const SkillLang = styled.li`
   -webkit-transition: all 2s ease;
   -moz-transition: all 2s ease;
   transition: all 2s ease;
-  background: ${({ color }) => color.clearer(0.9)};
+  background: ${({ skillColor }) => skillColor.clearer(0.9)};
 
   &:hover {
-    background: ${({ color }) => color.clearer(0.5)};
+    cursor: pointer;
+    background: ${({ skillColor }) => skillColor.clearer(0.5)};
+  }
+
+  svg {
+    width: 50px;
+    height: 50px;
   }
 `;
 
@@ -122,33 +94,52 @@ export default class MySkills extends React.Component {
     const { hoverIndex } = this.state;
 
     return (
-      <Skills>
-        {skills.map((skill, skillIndex) => (
-          <SkillSection key={skill.key} color={page.color}>
-            <SkillList>
-              {[10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0].map(index => (
-                <SkillBar
-                  color={
-                    hoverIndex != null && hoverIndex === skillIndex
-                      ? page.color.clearer(0.5)
-                      : page.color.clearer(0.9)
-                  }
-                  fill={index + 1 <= skill.value}
-                  delay={Math.floor((index + 2) / 2)}
-                />
-              ))}
+      <Container>
+        <Skills>
+          {skills.map((skill, skillIndex) => (
+            <SkillSection key={skill.key} skillColor={page.color}>
+              <SkillList>
+                {[10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0].map(index => (
+                  <SkillBar
+                    key={index}
+                    skillColor={
+                      hoverIndex != null && hoverIndex === skillIndex
+                        ? page.color.clearer(0.5)
+                        : page.color.clearer(0.9)
+                    }
+                    shouldFill={index + 1 <= skill.value}
+                    delay={Math.floor((index + 2) / 2)}
+                  />
+                ))}
 
-              <SkillLang
-                onMouseEnter={this.onEnter.bind(this, skillIndex)}
-                onMouseLeave={this.onLeave}
-                color={page.color}
-              >
-                {langIcon(skill.key)}
-              </SkillLang>
-            </SkillList>
-          </SkillSection>
-        ))}
-      </Skills>
+                <SkillLang
+                  onMouseEnter={this.onEnter.bind(this, skillIndex)}
+                  onMouseLeave={this.onLeave}
+                  skillColor={page.color}
+                >
+                  {langIcon(skill.key)}
+                </SkillLang>
+              </SkillList>
+            </SkillSection>
+          ))}
+        </Skills>
+
+        <SkillGap skillColor={page.color} />
+
+        <SubHeading>Other stuff I've worked or am working with</SubHeading>
+
+        <Skills>
+          {otherSkills.map(skill => (
+            <SkillSection key={skill.key} skillColor={page.color}>
+              <SkillList>
+                <SkillLang skillColor={page.color}>
+                  {langIcon(skill.key)}
+                </SkillLang>
+              </SkillList>
+            </SkillSection>
+          ))}
+        </Skills>
+      </Container>
     );
   }
 }

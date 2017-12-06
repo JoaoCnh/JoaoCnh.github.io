@@ -11,7 +11,7 @@ import Project from "./Project";
 import media from "../../../utils/media";
 
 const Background = styled.div`
-  background-color: ${props => props.color()};
+  background-color: ${({ backgroundColor }) => backgroundColor()};
 `;
 
 const Heading = styled.h2`
@@ -120,7 +120,7 @@ export default class MyProjects extends React.Component {
     }
 
     return (
-      <Background color={page.color}>
+      <Background backgroundColor={page.color}>
         <MaxWidth width={1280}>
           <Centered horizontal>
             <Heading>These are my OSS projects on Github</Heading>
