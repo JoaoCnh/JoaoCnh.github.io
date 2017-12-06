@@ -72,11 +72,11 @@ export default class Animation extends React.PureComponent {
   };
 
   componentDidMount() {
-    this.startTimer();
+    // this.startTimer();
   }
 
   componentWillUnmount() {
-    clearTimeout(this.timeout);
+    // clearTimeout(this.timeout);
   }
 
   render() {

@@ -6,6 +6,7 @@ import FaStarO from "react-icons/lib/fa/star-o";
 // I should really put this in a provider but I'm lazy af
 import theme from "../../../theme";
 import media from "../../../utils/media";
+import { langIcon } from "../../../utils/lang";
 
 const Container = styled.div`
   display: flex;
@@ -57,18 +58,6 @@ const Lang = styled.div`
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
-  padding: 0 5px;
-  background-image: linear-gradient(
-    45deg,
-    ${props => props.theme.secondary} 0%,
-    ${props => props.theme.secondary.darken(0.1)} 100%
-  );
-  font-weight: 700;
-  font-size: 0.875rem;
-  text-align: left;
-  color: white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  border-radius: 2px;
 `;
 
 const Stars = styled.div`
@@ -82,19 +71,21 @@ const Stars = styled.div`
   }
 `;
 
-export default ({ project }) => (
-  <Container>
-    <FaGithub />
-    <Title href={project.html_url} target="_blank" theme={theme}>
-      {project.name}
-    </Title>
-    <Lang theme={theme}>{project.language}</Lang>
-    {parseInt(project.stargazers_count) > 0 && (
-      <Stars>
-        <FaStarO />
-        {project.stargazers_count}
-      </Stars>
-    )}
-    <Description theme={theme}>{project.description}</Description>
-  </Container>
-);
+export default ({ project }) => {
+  return (
+    <Container>
+      <FaGithub />
+      <Title href={project.html_url} target="_blank" theme={theme}>
+        {project.name}
+      </Title>
+      <Lang>{langIcon(project.language)}</Lang>
+      {parseInt(project.stargazers_count) > 0 && (
+        <Stars>
+          <FaStarO />
+          {project.stargazers_count}
+        </Stars>
+      )}
+      <Description theme={theme}>{project.description}</Description>
+    </Container>
+  );
+};

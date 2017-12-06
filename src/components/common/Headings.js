@@ -23,7 +23,7 @@ const SubHeading = styled.p`
   text-align: center;
   font-weight: 200;
   line-height: 1.4;
-  max-width: 40rem;
+  max-width: 100rem;
   color: rgba(255, 255, 255, 0.8);
 `;
 

@@ -82,7 +82,8 @@ export default ({ page }) => {
             @Wiremaze
           </Link>{" "}
           in Porto, Portugal.
-          <br />
+        </SubHeading>
+        <SubHeading>
           I love <Text color={page.color}>Music</Text>,{" "}
           <Text color={page.color}>Movies</Text>,{" "}
           <Text color={page.color}>Sports</Text>,{" "}

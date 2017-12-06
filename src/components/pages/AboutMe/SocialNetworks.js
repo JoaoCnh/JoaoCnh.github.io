@@ -71,14 +71,21 @@ const IconContainer = styled.div`
   cursor: pointer;
   width: 128px;
   height: 128px;
-  ${media.phone`
-  width: 96px;
-  height: 96px;
+
   svg {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
   }
-`};
+
+  ${media.phone`
+    width: 96px;
+    height: 96px;
+    svg {
+      width: 60px;
+      height: 60px;
+    }
+  `};
+
   border-radius: 2px;
   &:hover {
     background-color: rgba(0, 0, 0, 0.1);
@@ -103,9 +110,11 @@ const TemplateName = styled.div`
   padding: 2rem;
   border-radius: 2px;
   color: white;
+
   img {
     display: block;
   }
+
   h4 {
     margin-bottom: 0;
     margin-top: 1rem;
@@ -141,7 +150,7 @@ export default class SocialNetworks extends React.Component {
                   this.setSocialNet(i);
                 }}
               >
-                <img src={Icon} width={80} height={80} />
+                {Icon}
               </IconContainer>
             ))}
           </Icons>

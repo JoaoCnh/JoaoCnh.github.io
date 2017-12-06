@@ -5,15 +5,16 @@ import { fadeIn } from "../../../utils/animations";
 import { decorateSelector } from "../../../theme";
 
 // images
-import linkedInSvg from "../../../../public/img/social/linkedin.svg";
-import twitterSvg from "../../../../public/img/social/twitter.svg";
-import githubSvg from "../../../../public/img/social/github.svg";
-import soSvg from "../../../../public/img/social/so.svg";
+import FaLinkedIn from "react-icons/lib/fa/linkedin";
+import FaTwitter from "react-icons/lib/fa/twitter";
+import FaGithub from "react-icons/lib/fa/github";
+import FaStackOverflow from "react-icons/lib/fa/stack-overflow";
 
 const Container = styled.div`
   display: flex;
   align-items: center;
   ${props => fadeIn(props.i * 0.1)};
+
   img {
     display: inline-block;
     margin-bottom: 0;
@@ -29,28 +30,28 @@ export default ({ iconSrc, title, extension, ...props }) => (
 
 export const icons = [
   {
-    Icon: linkedInSvg,
+    Icon: <FaLinkedIn />,
     title: "Linked In",
     value: "João Cunha",
     link: "https://www.linkedin.com/in/joao-cunha-6a98a29b/",
     color: decorateSelector(() => "#0077B5")
   },
   {
-    Icon: twitterSvg,
+    Icon: <FaTwitter />,
     title: "Twitter",
     value: "@lokuzt",
     link: "https://twitter.com/lokuzt",
     color: decorateSelector(() => "#1DA1F2")
   },
   {
-    Icon: githubSvg,
+    Icon: <FaGithub />,
     title: "Github",
     value: "JoaoCnh",
     link: "https://github.com/JoaoCnh",
     color: decorateSelector(() => "#F9FBFF")
   },
   {
-    Icon: soSvg,
+    Icon: <FaStackOverflow />,
     title: "Stack Overflow",
     value: "lokuzt",
     link: "https://stackoverflow.com/users/3154167/lokuzt",
