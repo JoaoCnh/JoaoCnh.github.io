@@ -5,6 +5,7 @@ import Centered from "../../common/flex/Centered";
 import { Heading, SubHeading } from "../../common/Headings";
 
 import MySkills from "./MySkills";
+import MyHistory from "./MyHistory";
 
 export default class MyExperience extends React.PureComponent {
   render() {
@@ -13,6 +14,8 @@ export default class MyExperience extends React.PureComponent {
     return (
       <Centered horizontal>
         <MaxWidth width={1280}>
+          <MyHistory page={page} />
+
           <Heading headingColor={page.color}>
             These are my posts on Medium
           </Heading>
