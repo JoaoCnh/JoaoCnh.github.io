@@ -860,6 +860,27 @@ var isBot = function isBot() {
 
 /***/ }),
 
+/***/ "./src/components/common/Background.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_styled_components__ = __webpack_require__("./node_modules/styled-components/dist/styled-components.es.js");
+var _templateObject = _taggedTemplateLiteralLoose(["\n  background-color: ", ";\n"], ["\n  background-color: ", ";\n"]);
+
+function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
+
+
+
+
+/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].div(_templateObject, function (_ref) {
+  var backgroundColor = _ref.backgroundColor;
+  return backgroundColor();
+}));
+
+/***/ }),
+
 /***/ "./src/components/common/Fullscreen.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2292,6 +2313,184 @@ function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return s
 
 /***/ }),
 
+/***/ "./src/components/common/tools/VSCode.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+
+
+/* harmony default export */ __webpack_exports__["a"] = (function (_ref) {
+  var _ref$width = _ref.width,
+      width = _ref$width === undefined ? 35 : _ref$width,
+      _ref$height = _ref.height,
+      height = _ref$height === undefined ? 35 : _ref$height,
+      className = _ref.className;
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    "svg",
+    {
+      className: className,
+      width: width + "px",
+      height: height + "px",
+      viewBox: "0 0 435 445"
+    },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      "g",
+      null,
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("path", {
+        d: "M82.255,191.38 L22.546,130.798 L46.776,120.414 L105.62,168.008 L208.597,66.762 L268.306,95.319 L268.306,287.428 L208.597,315.119 L106.485,216.469 L45.045,262.333 L22.546,250.218 L82.255,191.38 Z M207.731,241.563 L207.731,140.317 L145.426,190.94 L207.731,241.563 Z",
+        id: "Shape"
+      }),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("polygon", {
+        id: "Shape",
+        points: "0.046 331.56 322.823 380.885 322.823 0.995 434.454 52.051 434.454 398.193 324.554 444.922"
+      })
+    )
+  );
+});
+
+/***/ }),
+
+/***/ "./src/components/pages/AboutMe/Favorites.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_styled_components__ = __webpack_require__("./node_modules/styled-components/dist/styled-components.es.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_flex_MaxWidth__ = __webpack_require__("./src/components/common/flex/MaxWidth.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_langs_Node__ = __webpack_require__("./src/components/common/langs/Node.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_tools_VSCode__ = __webpack_require__("./src/components/common/tools/VSCode.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__common_langs_Javascript__ = __webpack_require__("./src/components/common/langs/Javascript.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__common_langs_React__ = __webpack_require__("./src/components/common/langs/React.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__theme__ = __webpack_require__("./src/theme/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__utils_media__ = __webpack_require__("./src/utils/media.js");
+var _templateObject = _taggedTemplateLiteralLoose(["\n  display: flex;\n  flex-wrap: wrap;\n  margin-top: 2rem;\n"], ["\n  display: flex;\n  flex-wrap: wrap;\n  margin-top: 2rem;\n"]),
+    _templateObject2 = _taggedTemplateLiteralLoose(["\n  display: flex;\n  flex-direction: column;\n  position: relative;\n  align-items: center;\n  text-align: center;\n  margin: 0.5rem;\n  width: calc(25% - 2rem);\n  -moz-box-shadow: 0 3px 100px ", ";\n  -webkit-box-shadow: 0 3px 100px ", ";\n  box-shadow: 0 3px 100px ", ";\n  padding: 0.5rem;\n\n  ", ";\n  ", ";\n\n  svg {\n    font-size: 2rem;\n    fill: ", ";\n    font-weight: 400;\n    line-height: 1.4;\n    text-shadow: 0 1px 0px rgba(0, 0, 0, 0.3);\n  }\n"], ["\n  display: flex;\n  flex-direction: column;\n  position: relative;\n  align-items: center;\n  text-align: center;\n  margin: 0.5rem;\n  width: calc(25% - 2rem);\n  -moz-box-shadow: 0 3px 100px ", ";\n  -webkit-box-shadow: 0 3px 100px ", ";\n  box-shadow: 0 3px 100px ", ";\n  padding: 0.5rem;\n\n  ", ";\n  ", ";\n\n  svg {\n    font-size: 2rem;\n    fill: ", ";\n    font-weight: 400;\n    line-height: 1.4;\n    text-shadow: 0 1px 0px rgba(0, 0, 0, 0.3);\n  }\n"]),
+    _templateObject3 = _taggedTemplateLiteralLoose(["width: calc(50% - 2rem);"], ["width: calc(50% - 2rem);"]),
+    _templateObject4 = _taggedTemplateLiteralLoose(["width: 100%;"], ["width: 100%;"]),
+    _templateObject5 = _taggedTemplateLiteralLoose(["\n  font-size: 1.125rem;\n  margin: 0.5rem 0;\n  text-decoration: none;\n  color: ", ";\n"], ["\n  font-size: 1.125rem;\n  margin: 0.5rem 0;\n  text-decoration: none;\n  color: ", ";\n"]),
+    _templateObject6 = _taggedTemplateLiteralLoose(["\n  font-size: 1.125rem;\n  margin: 0.5rem 0;\n  color: white;\n"], ["\n  font-size: 1.125rem;\n  margin: 0.5rem 0;\n  color: white;\n"]);
+
+function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+var Favorites = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].div(_templateObject);
+
+var Container = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].div(_templateObject2, function (_ref) {
+  var favColor = _ref.favColor;
+  return favColor.clearer(0.2);
+}, function (_ref2) {
+  var favColor = _ref2.favColor;
+  return favColor.clearer(0.2);
+}, function (_ref3) {
+  var favColor = _ref3.favColor;
+  return favColor.clearer(0.2);
+}, __WEBPACK_IMPORTED_MODULE_8__utils_media__["a" /* default */].tablet(_templateObject3), __WEBPACK_IMPORTED_MODULE_8__utils_media__["a" /* default */].phone(_templateObject4), function (props) {
+  return props.theme.secondary;
+});
+
+var Title = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].a(_templateObject5, function (props) {
+  return props.theme.secondary;
+});
+
+var Name = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].span(_templateObject6);
+
+/* harmony default export */ __webpack_exports__["a"] = (function (_ref4) {
+  var page = _ref4.page;
+
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    __WEBPACK_IMPORTED_MODULE_2__common_flex_MaxWidth__["a" /* default */],
+    { width: 1280 },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      Favorites,
+      null,
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        Container,
+        { favColor: page.color, theme: __WEBPACK_IMPORTED_MODULE_7__theme__["b" /* default */] },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          Title,
+          {
+            href: "https://code.visualstudio.com/",
+            target: "_blank",
+            theme: __WEBPACK_IMPORTED_MODULE_7__theme__["b" /* default */]
+          },
+          "Favorite Editor"
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__common_tools_VSCode__["a" /* default */], null),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          Name,
+          null,
+          "Visual Studio Code"
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        Container,
+        { favColor: page.color, theme: __WEBPACK_IMPORTED_MODULE_7__theme__["b" /* default */] },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          Title,
+          {
+            href: "https://www.javascript.com/",
+            target: "_blank",
+            theme: __WEBPACK_IMPORTED_MODULE_7__theme__["b" /* default */]
+          },
+          "Favorite Programming Language"
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__common_langs_Javascript__["a" /* default */], null),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          Name,
+          null,
+          "Javascript"
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        Container,
+        { favColor: page.color, theme: __WEBPACK_IMPORTED_MODULE_7__theme__["b" /* default */] },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          Title,
+          { href: "https://reactjs.org/", target: "_blank", theme: __WEBPACK_IMPORTED_MODULE_7__theme__["b" /* default */] },
+          "Favorite frontend lib / framework"
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__common_langs_React__["a" /* default */], null),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          Name,
+          null,
+          "React"
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        Container,
+        { favColor: page.color, theme: __WEBPACK_IMPORTED_MODULE_7__theme__["b" /* default */] },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          Title,
+          { href: "https://nodejs.org/en/", target: "_blank", theme: __WEBPACK_IMPORTED_MODULE_7__theme__["b" /* default */] },
+          "Favorite backend lib / framework"
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__common_langs_Node__["a" /* default */], null),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          Name,
+          null,
+          "Node JS"
+        )
+      )
+    )
+  );
+});
+
+/***/ }),
+
 /***/ "./src/components/pages/AboutMe/SocialNetworks.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2587,15 +2786,16 @@ var icons = [{
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_media___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_media__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_progressive_bg_image__ = __webpack_require__("./node_modules/react-progressive-bg-image/lib/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_progressive_bg_image___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react_progressive_bg_image__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__SocialNetworks__ = __webpack_require__("./src/components/pages/AboutMe/SocialNetworks.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__common_flex_Centered__ = __webpack_require__("./src/components/common/flex/Centered.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__common_flex_MaxWidth__ = __webpack_require__("./src/components/common/flex/MaxWidth.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__common_Headings__ = __webpack_require__("./src/components/common/Headings.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__common_links_Link__ = __webpack_require__("./src/components/common/links/Link.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__public_img_me_jpg__ = __webpack_require__("./public/img/me.jpg");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__public_img_me_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__public_img_me_jpg__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__public_img_mesmall_jpg__ = __webpack_require__("./public/img/mesmall.jpg");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__public_img_mesmall_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__public_img_mesmall_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_flex_Centered__ = __webpack_require__("./src/components/common/flex/Centered.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__common_flex_MaxWidth__ = __webpack_require__("./src/components/common/flex/MaxWidth.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__common_Headings__ = __webpack_require__("./src/components/common/Headings.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__common_links_Link__ = __webpack_require__("./src/components/common/links/Link.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__SocialNetworks__ = __webpack_require__("./src/components/pages/AboutMe/SocialNetworks.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Favorites__ = __webpack_require__("./src/components/pages/AboutMe/Favorites.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__public_img_me_jpg__ = __webpack_require__("./public/img/me.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__public_img_me_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__public_img_me_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__public_img_mesmall_jpg__ = __webpack_require__("./public/img/mesmall.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__public_img_mesmall_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__public_img_mesmall_jpg__);
 var _templateObject = _taggedTemplateLiteralLoose(["\n  color: ", ";\n  text-shadow: 0 0 50px ", ";\n"], ["\n  color: ", ";\n  text-shadow: 0 0 50px ", ";\n"]),
     _templateObject2 = _taggedTemplateLiteralLoose(["\n  flex: 1;\n  display: flex;\n  margin-right: 2rem;\n  flex-direction: column;\n"], ["\n  flex: 1;\n  display: flex;\n  margin-right: 2rem;\n  flex-direction: column;\n"]),
     _templateObject3 = _taggedTemplateLiteralLoose(["\n  display: flex;\n  position: relative;\n  margin-right: 2rem;\n  flex-direction: row;\n  flex-wrap: wrap;\n"], ["\n  display: flex;\n  position: relative;\n  margin-right: 2rem;\n  flex-direction: row;\n  flex-wrap: wrap;\n"]),
@@ -2604,6 +2804,7 @@ var _templateObject = _taggedTemplateLiteralLoose(["\n  color: ", ";\n  text-sha
     _templateObject6 = _taggedTemplateLiteralLoose(["\n  height: 500px;\n  background-size: contain;\n  background-position: center center;\n"], ["\n  height: 500px;\n  background-size: contain;\n  background-position: center center;\n"]);
 
 function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
+
 
 
 
@@ -2647,23 +2848,23 @@ var StyledProgressiveImage = Object(__WEBPACK_IMPORTED_MODULE_1_styled_component
   var page = _ref5.page;
 
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    __WEBPACK_IMPORTED_MODULE_5__common_flex_Centered__["a" /* default */],
+    __WEBPACK_IMPORTED_MODULE_4__common_flex_Centered__["a" /* default */],
     { horizontal: true },
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      __WEBPACK_IMPORTED_MODULE_6__common_flex_MaxWidth__["a" /* default */],
+      __WEBPACK_IMPORTED_MODULE_5__common_flex_MaxWidth__["a" /* default */],
       { width: 1280 },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_7__common_Headings__["a" /* Heading */],
+        __WEBPACK_IMPORTED_MODULE_6__common_Headings__["a" /* Heading */],
         { headingColor: page.color },
         "Hello! My name is Jo\xE3o Cunha"
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_7__common_Headings__["b" /* SubHeading */],
+        __WEBPACK_IMPORTED_MODULE_6__common_Headings__["b" /* SubHeading */],
         null,
         "I'm a Full-Stack developer working",
         " ",
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_8__common_links_Link__["b" /* default */],
+          __WEBPACK_IMPORTED_MODULE_7__common_links_Link__["b" /* default */],
           {
             linkColor: page.color,
             href: "https://www.wiremaze.com/",
@@ -2675,7 +2876,7 @@ var StyledProgressiveImage = Object(__WEBPACK_IMPORTED_MODULE_1_styled_component
         "in Porto, Portugal."
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_7__common_Headings__["b" /* SubHeading */],
+        __WEBPACK_IMPORTED_MODULE_6__common_Headings__["b" /* SubHeading */],
         null,
         "I love ",
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -2726,8 +2927,8 @@ var StyledProgressiveImage = Object(__WEBPACK_IMPORTED_MODULE_1_styled_component
               ColumnHeading,
               { headingColor: page.color },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(StyledProgressiveImage, {
-                src: __WEBPACK_IMPORTED_MODULE_9__public_img_me_jpg___default.a,
-                placeholder: __WEBPACK_IMPORTED_MODULE_10__public_img_mesmall_jpg___default.a,
+                src: __WEBPACK_IMPORTED_MODULE_10__public_img_me_jpg___default.a,
+                placeholder: __WEBPACK_IMPORTED_MODULE_11__public_img_mesmall_jpg___default.a,
                 transition: "all 1s linear"
               })
             )
@@ -2766,8 +2967,8 @@ var StyledProgressiveImage = Object(__WEBPACK_IMPORTED_MODULE_1_styled_component
               ColumnHeading,
               { headingColor: page.color },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(StyledProgressiveImage, {
-                src: __WEBPACK_IMPORTED_MODULE_9__public_img_me_jpg___default.a,
-                placeholder: __WEBPACK_IMPORTED_MODULE_10__public_img_mesmall_jpg___default.a,
+                src: __WEBPACK_IMPORTED_MODULE_10__public_img_me_jpg___default.a,
+                placeholder: __WEBPACK_IMPORTED_MODULE_11__public_img_mesmall_jpg___default.a,
                 transition: "all 1s linear"
               })
             )
@@ -2793,7 +2994,8 @@ var StyledProgressiveImage = Object(__WEBPACK_IMPORTED_MODULE_1_styled_component
           )
         )
       ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__SocialNetworks__["a" /* default */], null)
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__Favorites__["a" /* default */], { page: page }),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__SocialNetworks__["a" /* default */], null)
     )
   );
 });
@@ -3378,18 +3580,18 @@ var Stars = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].div(_temp
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_icons_lib_fa_github___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_react_icons_lib_fa_github__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react_icons_lib_fa_fire__ = __webpack_require__("./node_modules/react-icons/lib/fa/fire.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react_icons_lib_fa_fire___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_react_icons_lib_fa_fire__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__common_flex_MaxWidth__ = __webpack_require__("./src/components/common/flex/MaxWidth.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__common_flex_Centered__ = __webpack_require__("./src/components/common/flex/Centered.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Project__ = __webpack_require__("./src/components/pages/MyProjects/Project.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__utils_media__ = __webpack_require__("./src/utils/media.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__common_Background__ = __webpack_require__("./src/components/common/Background.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__common_flex_MaxWidth__ = __webpack_require__("./src/components/common/flex/MaxWidth.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__common_flex_Centered__ = __webpack_require__("./src/components/common/flex/Centered.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Project__ = __webpack_require__("./src/components/pages/MyProjects/Project.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__utils_media__ = __webpack_require__("./src/utils/media.js");
 
 
-var _templateObject = _taggedTemplateLiteralLoose(["\n  background-color: ", ";\n"], ["\n  background-color: ", ";\n"]),
-    _templateObject2 = _taggedTemplateLiteralLoose(["\n  text-align: center;\n  font-weight: 200;\n  font-size: 2.5rem;\n  margin-top: 6rem;\n  margin-bottom: 1rem;\n  text-transform: uppercase;\n  color: #1c2022;\n  text-shadow: 0 0 100px #3c4244;\n  ", ";\n"], ["\n  text-align: center;\n  font-weight: 200;\n  font-size: 2.5rem;\n  margin-top: 6rem;\n  margin-bottom: 1rem;\n  text-transform: uppercase;\n  color: #1c2022;\n  text-shadow: 0 0 100px #3c4244;\n  ", ";\n"]),
-    _templateObject3 = _taggedTemplateLiteralLoose(["margin-top: 3rem; margin-bottom: 0; "], ["margin-top: 3rem; margin-bottom: 0; "]),
-    _templateObject4 = _taggedTemplateLiteralLoose(["\n  display: flex;\n  flex-wrap: wrap;\n  margin-top: 2rem;\n  margin-bottom: 6rem;\n"], ["\n  display: flex;\n  flex-wrap: wrap;\n  margin-top: 2rem;\n  margin-bottom: 6rem;\n"]),
-    _templateObject5 = _taggedTemplateLiteralLoose(["\n  color: #1c2022;\n  font-size: 2rem;\n  margin-top: 5rem;\n  margin-bottom: 5rem;\n  margin-right: 1rem;\n  -webkit-animation: icon-spin 2s infinite linear;\n  animation: icon-spin 2s infinite linear;\n\n  @-webkit-keyframes icon-spin {\n    0% {\n      -webkit-transform: rotate(0deg);\n      transform: rotate(0deg);\n    }\n    100% {\n      -webkit-transform: rotate(359deg);\n      transform: rotate(359deg);\n    }\n  }\n\n  @keyframes icon-spin {\n    0% {\n      -webkit-transform: rotate(0deg);\n      transform: rotate(0deg);\n    }\n    100% {\n      -webkit-transform: rotate(359deg);\n      transform: rotate(359deg);\n    }\n  }\n"], ["\n  color: #1c2022;\n  font-size: 2rem;\n  margin-top: 5rem;\n  margin-bottom: 5rem;\n  margin-right: 1rem;\n  -webkit-animation: icon-spin 2s infinite linear;\n  animation: icon-spin 2s infinite linear;\n\n  @-webkit-keyframes icon-spin {\n    0% {\n      -webkit-transform: rotate(0deg);\n      transform: rotate(0deg);\n    }\n    100% {\n      -webkit-transform: rotate(359deg);\n      transform: rotate(359deg);\n    }\n  }\n\n  @keyframes icon-spin {\n    0% {\n      -webkit-transform: rotate(0deg);\n      transform: rotate(0deg);\n    }\n    100% {\n      -webkit-transform: rotate(359deg);\n      transform: rotate(359deg);\n    }\n  }\n"]),
-    _templateObject6 = _taggedTemplateLiteralLoose(["\n  width: 100%;\n  position: relative;\n  padding: 0.75rem 1.25rem;\n  margin-bottom: 5rem;\n  border: 1px solid transparent;\n  color: #721c24;\n  background-color: #f8d7da;\n  border-color: #f5c6cb;\n\n  h4 {\n    color: inherit;\n  }\n\n  p {\n    margin-top: 0;\n    margin-bottom: 1rem;\n  }\n"], ["\n  width: 100%;\n  position: relative;\n  padding: 0.75rem 1.25rem;\n  margin-bottom: 5rem;\n  border: 1px solid transparent;\n  color: #721c24;\n  background-color: #f8d7da;\n  border-color: #f5c6cb;\n\n  h4 {\n    color: inherit;\n  }\n\n  p {\n    margin-top: 0;\n    margin-bottom: 1rem;\n  }\n"]);
+var _templateObject = _taggedTemplateLiteralLoose(["\n  text-align: center;\n  font-weight: 200;\n  font-size: 2.5rem;\n  margin-top: 6rem;\n  margin-bottom: 1rem;\n  text-transform: uppercase;\n  color: #1c2022;\n  text-shadow: 0 0 100px #3c4244;\n  ", ";\n"], ["\n  text-align: center;\n  font-weight: 200;\n  font-size: 2.5rem;\n  margin-top: 6rem;\n  margin-bottom: 1rem;\n  text-transform: uppercase;\n  color: #1c2022;\n  text-shadow: 0 0 100px #3c4244;\n  ", ";\n"]),
+    _templateObject2 = _taggedTemplateLiteralLoose(["margin-top: 3rem; margin-bottom: 0; "], ["margin-top: 3rem; margin-bottom: 0; "]),
+    _templateObject3 = _taggedTemplateLiteralLoose(["\n  display: flex;\n  flex-wrap: wrap;\n  margin-top: 2rem;\n  margin-bottom: 6rem;\n"], ["\n  display: flex;\n  flex-wrap: wrap;\n  margin-top: 2rem;\n  margin-bottom: 6rem;\n"]),
+    _templateObject4 = _taggedTemplateLiteralLoose(["\n  color: #1c2022;\n  font-size: 2rem;\n  margin-top: 5rem;\n  margin-bottom: 5rem;\n  margin-right: 1rem;\n  -webkit-animation: icon-spin 2s infinite linear;\n  animation: icon-spin 2s infinite linear;\n\n  @-webkit-keyframes icon-spin {\n    0% {\n      -webkit-transform: rotate(0deg);\n      transform: rotate(0deg);\n    }\n    100% {\n      -webkit-transform: rotate(359deg);\n      transform: rotate(359deg);\n    }\n  }\n\n  @keyframes icon-spin {\n    0% {\n      -webkit-transform: rotate(0deg);\n      transform: rotate(0deg);\n    }\n    100% {\n      -webkit-transform: rotate(359deg);\n      transform: rotate(359deg);\n    }\n  }\n"], ["\n  color: #1c2022;\n  font-size: 2rem;\n  margin-top: 5rem;\n  margin-bottom: 5rem;\n  margin-right: 1rem;\n  -webkit-animation: icon-spin 2s infinite linear;\n  animation: icon-spin 2s infinite linear;\n\n  @-webkit-keyframes icon-spin {\n    0% {\n      -webkit-transform: rotate(0deg);\n      transform: rotate(0deg);\n    }\n    100% {\n      -webkit-transform: rotate(359deg);\n      transform: rotate(359deg);\n    }\n  }\n\n  @keyframes icon-spin {\n    0% {\n      -webkit-transform: rotate(0deg);\n      transform: rotate(0deg);\n    }\n    100% {\n      -webkit-transform: rotate(359deg);\n      transform: rotate(359deg);\n    }\n  }\n"]),
+    _templateObject5 = _taggedTemplateLiteralLoose(["\n  width: 100%;\n  position: relative;\n  padding: 0.75rem 1.25rem;\n  margin-bottom: 5rem;\n  border: 1px solid transparent;\n  color: #721c24;\n  background-color: #f8d7da;\n  border-color: #f5c6cb;\n\n  h4 {\n    color: inherit;\n  }\n\n  p {\n    margin-top: 0;\n    margin-bottom: 1rem;\n  }\n"], ["\n  width: 100%;\n  position: relative;\n  padding: 0.75rem 1.25rem;\n  margin-bottom: 5rem;\n  border: 1px solid transparent;\n  color: #721c24;\n  background-color: #f8d7da;\n  border-color: #f5c6cb;\n\n  h4 {\n    color: inherit;\n  }\n\n  p {\n    margin-top: 0;\n    margin-bottom: 1rem;\n  }\n"]);
 
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
@@ -3413,18 +3615,14 @@ function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return s
 
 
 
-var Background = __WEBPACK_IMPORTED_MODULE_2_styled_components__["default"].div(_templateObject, function (_ref) {
-  var backgroundColor = _ref.backgroundColor;
-  return backgroundColor();
-});
 
-var Heading = __WEBPACK_IMPORTED_MODULE_2_styled_components__["default"].h2(_templateObject2, __WEBPACK_IMPORTED_MODULE_9__utils_media__["a" /* default */].phone(_templateObject3));
+var Heading = __WEBPACK_IMPORTED_MODULE_2_styled_components__["default"].h2(_templateObject, __WEBPACK_IMPORTED_MODULE_10__utils_media__["a" /* default */].phone(_templateObject2));
 
-var Projects = __WEBPACK_IMPORTED_MODULE_2_styled_components__["default"].div(_templateObject4);
+var Projects = __WEBPACK_IMPORTED_MODULE_2_styled_components__["default"].div(_templateObject3);
 
-var Loader = Object(__WEBPACK_IMPORTED_MODULE_2_styled_components__["default"])(__WEBPACK_IMPORTED_MODULE_3_react_icons_lib_fa_circle_o_notch___default.a)(_templateObject5);
+var Loader = Object(__WEBPACK_IMPORTED_MODULE_2_styled_components__["default"])(__WEBPACK_IMPORTED_MODULE_3_react_icons_lib_fa_circle_o_notch___default.a)(_templateObject4);
 
-var NotMyFaultM8 = __WEBPACK_IMPORTED_MODULE_2_styled_components__["default"].div(_templateObject6);
+var NotMyFaultM8 = __WEBPACK_IMPORTED_MODULE_2_styled_components__["default"].div(_templateObject5);
 
 var MyProjects = function (_React$Component) {
   _inherits(MyProjects, _React$Component);
@@ -3501,13 +3699,13 @@ var MyProjects = function (_React$Component) {
     }
 
     return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-      Background,
+      __WEBPACK_IMPORTED_MODULE_6__common_Background__["a" /* default */],
       { backgroundColor: page.color },
       __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_6__common_flex_MaxWidth__["a" /* default */],
+        __WEBPACK_IMPORTED_MODULE_7__common_flex_MaxWidth__["a" /* default */],
         { width: 1280 },
         __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_7__common_flex_Centered__["a" /* default */],
+          __WEBPACK_IMPORTED_MODULE_8__common_flex_Centered__["a" /* default */],
           { horizontal: true },
           __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
             Heading,
@@ -3530,7 +3728,7 @@ var MyProjects = function (_React$Component) {
           Projects,
           null,
           projects.map(function (project) {
-            return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__Project__["a" /* default */], { key: project.id, project: project });
+            return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__Project__["a" /* default */], { key: project.id, project: project });
           })
         )
       )
