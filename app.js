@@ -2800,6 +2800,149 @@ var StyledProgressiveImage = Object(__WEBPACK_IMPORTED_MODULE_1_styled_component
 
 /***/ }),
 
+/***/ "./src/components/pages/MyExperience/MyHistory.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_styled_components__ = __webpack_require__("./node_modules/styled-components/dist/styled-components.es.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_icons_lib_fa_graduation_cap__ = __webpack_require__("./node_modules/react-icons/lib/fa/graduation-cap.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_icons_lib_fa_graduation_cap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_icons_lib_fa_graduation_cap__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_icons_lib_fa_briefcase__ = __webpack_require__("./node_modules/react-icons/lib/fa/briefcase.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_icons_lib_fa_briefcase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react_icons_lib_fa_briefcase__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_flex_Centered__ = __webpack_require__("./src/components/common/flex/Centered.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__theme__ = __webpack_require__("./src/theme/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__utils_media__ = __webpack_require__("./src/utils/media.js");
+var _templateObject = _taggedTemplateLiteralLoose(["\n  margin-top: 5rem;\n  margin-bottom: 5rem;\n"], ["\n  margin-top: 5rem;\n  margin-bottom: 5rem;\n"]),
+    _templateObject2 = _taggedTemplateLiteralLoose(["\n  display: flex;\n  margin-bottom: 1rem;\n\n  ", ";\n\n  svg {\n    margin-right: 1rem;\n    min-width: 48px;\n    height: 48px;\n    color: white;\n    text-shadow: 0 2px 2px ", ";\n  }\n"], ["\n  display: flex;\n  margin-bottom: 1rem;\n\n  ", ";\n\n  svg {\n    margin-right: 1rem;\n    min-width: 48px;\n    height: 48px;\n    color: white;\n    text-shadow: 0 2px 2px ", ";\n  }\n"]),
+    _templateObject3 = _taggedTemplateLiteralLoose(["\n    text-align: left;\n    flex-direction: row;\n\n    svg {\n      height: 32px;\n      min-width: 32px;\n    }\n  "], ["\n    text-align: left;\n    flex-direction: row;\n\n    svg {\n      height: 32px;\n      min-width: 32px;\n    }\n  "]),
+    _templateObject4 = _taggedTemplateLiteralLoose(["\n  color: white;\n  font-size: 1.5rem;\n  font-weight: 400;\n  margin-top: 0.5rem;\n  margin-bottom: 0.5rem;\n  text-shadow: 0 1px 0px ", ";\n"], ["\n  color: white;\n  font-size: 1.5rem;\n  font-weight: 400;\n  margin-top: 0.5rem;\n  margin-bottom: 0.5rem;\n  text-shadow: 0 1px 0px ", ";\n"]),
+    _templateObject5 = _taggedTemplateLiteralLoose(["\n  color: white;\n  font-size: 1.125rem;\n  font-weight: 400;\n  line-height: 1.4;\n  text-shadow: 0 1px 0px ", ";\n"], ["\n  color: white;\n  font-size: 1.125rem;\n  font-weight: 400;\n  line-height: 1.4;\n  text-shadow: 0 1px 0px ", ";\n"]),
+    _templateObject6 = _taggedTemplateLiteralLoose(["\n  color: white;\n  font-weight: 600;\n  text-decoration: none;\n\n  &:hover {\n    color: ", ";\n  }\n"], ["\n  color: white;\n  font-weight: 600;\n  text-decoration: none;\n\n  &:hover {\n    color: ", ";\n  }\n"]);
+
+function _taggedTemplateLiteralLoose(strings, raw) { strings.raw = raw; return strings; }
+
+
+
+
+
+
+
+
+
+
+
+/**
+|--------------------------------------------------
+| I KNOW THE HISTORY NAME IS DUMB. YOLO
+|--------------------------------------------------
+*/
+
+var Container = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].div(_templateObject);
+
+var History = function History(_ref) {
+  var pageColor = _ref.pageColor,
+      right = _ref.right,
+      title = _ref.title,
+      Icon = _ref.Icon,
+      children = _ref.children,
+      _ref$iconSize = _ref.iconSize,
+      iconSize = _ref$iconSize === undefined ? 42 : _ref$iconSize;
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    "section",
+    null,
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      HistoryContainer,
+      { pageColor: pageColor, right: right, iconSize: iconSize },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Icon, null),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "div",
+        null,
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          HistoryHeading,
+          { pageColor: pageColor },
+          title
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          HistoryDescription,
+          { pageColor: pageColor },
+          children
+        )
+      )
+    )
+  );
+};
+
+var HistoryContainer = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].div(_templateObject2, __WEBPACK_IMPORTED_MODULE_6__utils_media__["a" /* default */].phone(_templateObject3), function (_ref2) {
+  var pageColor = _ref2.pageColor;
+  return pageColor.clearer(0.9);
+});
+
+var HistoryHeading = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].h4(_templateObject4, function (_ref3) {
+  var pageColor = _ref3.pageColor;
+  return pageColor.clearer(0.9);
+});
+
+var HistoryDescription = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].p(_templateObject5, function (_ref4) {
+  var pageColor = _ref4.pageColor;
+  return pageColor.clearer(0.9);
+});
+
+var Link = __WEBPACK_IMPORTED_MODULE_1_styled_components__["default"].a(_templateObject6, function (_ref5) {
+  var pageColor = _ref5.pageColor;
+  return pageColor.lighten(0.2)();
+});
+
+/* harmony default export */ __webpack_exports__["a"] = (function (_ref6) {
+  var page = _ref6.page;
+
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    Container,
+    null,
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      History,
+      {
+        pageColor: page.color,
+        Icon: __WEBPACK_IMPORTED_MODULE_3_react_icons_lib_fa_briefcase___default.a,
+        title: "Started working at Wiremaze SA - 2014 to present"
+      },
+      "Right after college I decided to throw myself straight into the work environment and start learning as much as I could. So far it's been amazing full of learning, knowledge and great people and friends.",
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        Link,
+        {
+          href: "https://www.wiremaze.com/",
+          pageColor: page.color,
+          target: "_blank"
+        },
+        "@Wiremaze"
+      )
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      History,
+      {
+        pageColor: page.color,
+        Icon: __WEBPACK_IMPORTED_MODULE_2_react_icons_lib_fa_graduation_cap___default.a,
+        title: "Software Engineering Degree - ISEP - 2011 to 2014"
+      },
+      "Started my university degree (Software Engineering) in 2011 and completed it in 3 years.",
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        Link,
+        {
+          href: "https://www.isep.ipp.pt/",
+          pageColor: page.color,
+          target: "_blank"
+        },
+        "@ISEP"
+      )
+    )
+  );
+});
+
+/***/ }),
+
 /***/ "./src/components/pages/MyExperience/MySkills.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2983,11 +3126,13 @@ var MySkills = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_flex_Centered__ = __webpack_require__("./src/components/common/flex/Centered.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_Headings__ = __webpack_require__("./src/components/common/Headings.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__MySkills__ = __webpack_require__("./src/components/pages/MyExperience/MySkills.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__MyHistory__ = __webpack_require__("./src/components/pages/MyExperience/MyHistory.js");
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 
 
 
@@ -3016,6 +3161,7 @@ var MyExperience = function (_React$PureComponent) {
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         __WEBPACK_IMPORTED_MODULE_1__common_flex_MaxWidth__["a" /* default */],
         { width: 1280 },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__MyHistory__["a" /* default */], { page: page }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           __WEBPACK_IMPORTED_MODULE_3__common_Headings__["a" /* Heading */],
           { headingColor: page.color },
