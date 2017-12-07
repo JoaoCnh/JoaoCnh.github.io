@@ -1,5 +1,6 @@
-import React from "react";
+import React, { Fragment } from "react";
 import styled from "styled-components";
+import { Follow, Timeline } from "react-twitter-widgets";
 
 import { fadeIn } from "../../../utils/animations";
 import { decorateSelector } from "../../../theme";
@@ -41,7 +42,27 @@ export const icons = [
     title: "Twitter",
     value: "@lokuzt",
     link: "https://twitter.com/lokuzt",
-    color: decorateSelector(() => "#1DA1F2")
+    color: decorateSelector(() => "#1DA1F2"),
+    embed: (
+      <Fragment key="twitter-embed">
+        <Follow username="lokuzt" />
+        <Timeline
+          dataSource={{
+            sourceType: "profile",
+            screenName: "lokuzt"
+          }}
+          options={{
+            username: "lokuzt",
+            height: "300",
+            width: "500",
+            theme: "dark",
+            linkColor: "#1DA1F2",
+            borderColor: "#1DA1F2"
+          }}
+          onLoad={() => {}}
+        />
+      </Fragment>
+    )
   },
   {
     Icon: <FaGithub />,

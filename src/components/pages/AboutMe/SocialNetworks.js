@@ -156,6 +156,7 @@ export default class SocialNetworks extends React.Component {
           </Icons>
           <Container containerColor={network.color}>
             <Centered horizontal>
+              {network.embed}
               <RollingText
                 style={{
                   display: "flex",
