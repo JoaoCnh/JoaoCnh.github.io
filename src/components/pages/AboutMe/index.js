@@ -3,11 +3,12 @@ import styled from "styled-components";
 import Media from "react-media";
 import ProgressiveImage from "react-progressive-bg-image";
 
-import SocialNetworks from "./SocialNetworks";
 import Centered from "../../common/flex/Centered";
 import MaxWidth from "../../common/flex/MaxWidth";
 import { Heading, SubHeading } from "../../common/Headings";
 import Link from "../../common/links/Link";
+import SocialNetworks from "./SocialNetworks";
+import Favorites from "./Favorites";
 
 import meImg from "../../../../public/img/me.jpg";
 import meSmallImg from "../../../../public/img/mesmall.jpg";
@@ -157,6 +158,7 @@ export default ({ page }) => {
           </Fragment>
         </Media>
 
+        <Favorites page={page} />
         <SocialNetworks />
       </MaxWidth>
     </Centered>

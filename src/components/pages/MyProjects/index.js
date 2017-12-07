@@ -4,15 +4,12 @@ import FaCircleONotch from "react-icons/lib/fa/circle-o-notch";
 import FaGithub from "react-icons/lib/fa/github";
 import FaFire from "react-icons/lib/fa/fire";
 
+import Background from "../../common/Background";
 import MaxWidth from "../../common/flex/MaxWidth";
 import Centered from "../../common/flex/Centered";
 import Project from "./Project";
 
 import media from "../../../utils/media";
-
-const Background = styled.div`
-  background-color: ${({ backgroundColor }) => backgroundColor()};
-`;
 
 const Heading = styled.h2`
   text-align: center;
