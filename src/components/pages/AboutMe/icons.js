@@ -76,6 +76,17 @@ export const icons = [
     title: "Stack Overflow",
     value: "lokuzt",
     link: "https://stackoverflow.com/users/3154167/lokuzt",
-    color: decorateSelector(() => "#F48024")
+    color: decorateSelector(() => "#F48024"),
+    embed: (
+      <a href="https://stackoverflow.com/users/3154167/lokuzt">
+        <img
+          src="https://stackoverflow.com/users/flair/3154167.png?theme=dark"
+          width="208"
+          height="58"
+          alt="profile for Lokuzt at Stack Overflow, Q&amp;A for professional and enthusiast programmers"
+          title="profile for Lokuzt at Stack Overflow, Q&amp;A for professional and enthusiast programmers"
+        />
+      </a>
+    )
   }
 ];
