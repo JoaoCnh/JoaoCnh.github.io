@@ -1,16 +1,15 @@
 import React from "react";
-
-import AboutMe from "../components/pages/AboutMe";
-import MyProjects from "../components/pages/MyProjects";
-import MyExperience from "../components/pages/MyExperience";
-
-import { decorateSelector } from "../theme";
-
-// images
 import MdFingerprint from "react-icons/lib/md/fingerprint";
 import FaGithub from "react-icons/lib/fa/github";
 import FaCode from "react-icons/lib/fa/code";
 import FaHtml5 from "react-icons/lib/fa/html5";
+
+import AboutMe from "../components/pages/AboutMe";
+import MyProjects from "../components/pages/MyProjects";
+import MyExperience from "../components/pages/MyExperience";
+import ThisDesign from "../components/pages/ThisDesign";
+
+import { decorateSelector } from "../theme";
 
 export const aboutMe = {
   name: "about-me",
@@ -42,7 +41,7 @@ export const thisDesign = {
   niceName: "This design",
   Icon: <FaHtml5 />,
   color: decorateSelector(() => "#FF9800"),
-  render: page => <AboutMe page={page} />
+  render: page => <ThisDesign page={page} />
 };
 
 export default function getDefinition(theme) {
