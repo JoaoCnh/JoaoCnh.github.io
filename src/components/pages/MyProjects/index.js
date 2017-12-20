@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import FaCircleONotch from "react-icons/lib/fa/circle-o-notch";
-import FaGithub from "react-icons/lib/fa/github";
-import FaFire from "react-icons/lib/fa/fire";
 
+import ErrorBoundary from "../../errors/ErrorBoundary";
 import Background from "../../common/Background";
 import MaxWidth from "../../common/flex/MaxWidth";
 import Centered from "../../common/flex/Centered";
@@ -62,85 +61,50 @@ const Loader = styled(FaCircleONotch)`
   }
 `;
 
-const NotMyFaultM8 = styled.div`
-  width: 100%;
-  position: relative;
-  padding: 0.75rem 1.25rem;
-  margin-bottom: 5rem;
-  border: 1px solid transparent;
-  color: #721c24;
-  background-color: #f8d7da;
-  border-color: #f5c6cb;
-
-  h4 {
-    color: inherit;
-  }
-
-  p {
-    margin-top: 0;
-    margin-bottom: 1rem;
-  }
-`;
-
 export default class MyProjects extends React.Component {
   state = {
     init: true,
     loading: false,
-    projects: [],
-    error: false
+    projects: []
   };
 
   fetchProjects = async () => {
-    try {
-      const res = await fetch("https://api.github.com/users/JoaoCnh/repos");
-      const json = await res.json();
+    const res = await fetch("https://api.github.com/users/JoaoCnh/repos");
+    const json = await res.json();
 
-      this.setState({ error: false, loading: false, projects: json });
-    } catch (error) {
-      this.setState({ error: true, loading: false });
-    }
+    this.setState({ loading: false, projects: json });
   };
 
   componentDidMount() {
-    this.setState(
-      { init: false, loading: true },
-      this.fetchProjects.bind(this)
-    );
+    this.setState({ init: false, loading: true }, this.fetchProjects);
   }
 
   render() {
     const { page } = this.props;
-    const { init, loading, projects, error } = this.state;
+    const { init, loading, projects } = this.state;
 
     if (init) {
       return <div />;
     }
 
     return (
-      <Background backgroundColor={page.color}>
-        <MaxWidth width={1280}>
-          <Centered horizontal>
-            <Heading>These are my OSS projects on Github</Heading>
-            {loading && <Loader />}
-            {error && (
-              <NotMyFaultM8>
-                <h4>
-                  <FaFire />
-                  Something at Github must be brewing
-                </h4>
-              </NotMyFaultM8>
-            )}
-          </Centered>
-          {!error &&
-            projects.length > 0 && (
+      <ErrorBoundary type="github">
+        <Background backgroundColor={page.color}>
+          <MaxWidth width={1280}>
+            <Centered horizontal>
+              <Heading>These are my OSS projects on Github</Heading>
+              {loading && <Loader />}
+            </Centered>
+            {projects.length > 0 && (
               <Projects>
                 {projects.map(project => (
                   <Project key={project.id} project={project} />
                 ))}
               </Projects>
             )}
-        </MaxWidth>
-      </Background>
+          </MaxWidth>
+        </Background>
+      </ErrorBoundary>
     );
   }
 }
