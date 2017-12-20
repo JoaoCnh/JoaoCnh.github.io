@@ -3,9 +3,10 @@ import React from "react";
 import MaxWidth from "../../common/flex/MaxWidth";
 import Centered from "../../common/flex/Centered";
 import { Heading, SubHeading } from "../../common/Headings";
-
+import ErrorBoudary from "../../errors/ErrorBoundary";
 import MySkills from "./MySkills";
 import MyHistory from "./MyHistory";
+import MyMediumStories from "./MyMediumStories";
 
 export default class MyExperience extends React.PureComponent {
   render() {
@@ -27,6 +28,10 @@ export default class MyExperience extends React.PureComponent {
             Don't have a schedule for posting so please feel free to follow to
             be up to date.
           </SubHeading>
+
+          <ErrorBoudary type="medium">
+            <MyMediumStories page={page} />
+          </ErrorBoudary>
 
           <Heading headingColor={page.color}>
             This is what I've been doing for the past few years

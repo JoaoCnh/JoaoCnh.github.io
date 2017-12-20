@@ -3,6 +3,7 @@ import styled from "styled-components";
 import FaGraduationCap from "react-icons/lib/fa/graduation-cap";
 import FaBriefcase from "react-icons/lib/fa/briefcase";
 
+import MaxWidth from "../../common/flex/MaxWidth";
 import Centered from "../../common/flex/Centered";
 
 import theme from "../../../theme";
@@ -16,7 +17,6 @@ import media from "../../../utils/media";
 
 const Container = styled.div`
   margin-top: 5rem;
-  margin-bottom: 5rem;
 `;
 
 const History = ({
@@ -92,40 +92,44 @@ const Link = styled.a`
 
 export default ({ page }) => {
   return (
-    <Container>
-      <History
-        pageColor={page.color}
-        Icon={FaBriefcase}
-        title="Started working at Wiremaze SA - 2014 to present"
-      >
-        Right after college I decided to throw myself straight into the work
-        environment and start learning as much as I could. So far it's been
-        amazing full of learning, knowledge and great people and friends.
-        <br />
-        <Link
-          href="https://www.wiremaze.com/"
-          pageColor={page.color}
-          target="_blank"
-        >
-          @Wiremaze
-        </Link>
-      </History>
-      <History
-        pageColor={page.color}
-        Icon={FaGraduationCap}
-        title="Software Engineering Degree - ISEP - 2011 to 2014"
-      >
-        Started my university degree (Software Engineering) in 2011 and
-        completed it in 3 years.
-        <br />
-        <Link
-          href="https://www.isep.ipp.pt/"
-          pageColor={page.color}
-          target="_blank"
-        >
-          @ISEP
-        </Link>
-      </History>
-    </Container>
+    <MaxWidth width={1280}>
+      <Centered horizontal>
+        <Container>
+          <History
+            pageColor={page.color}
+            Icon={FaBriefcase}
+            title="Started working at Wiremaze SA - 2014 to present"
+          >
+            Right after college I decided to throw myself straight into the work
+            environment and start learning as much as I could. So far it's been
+            amazing full of learning, knowledge and great people and friends.
+            <br />
+            <Link
+              href="https://www.wiremaze.com/"
+              pageColor={page.color}
+              target="_blank"
+            >
+              @Wiremaze
+            </Link>
+          </History>
+          <History
+            pageColor={page.color}
+            Icon={FaGraduationCap}
+            title="Software Engineering Degree - ISEP - 2011 to 2014"
+          >
+            Started my university degree (Software Engineering) in 2011 and
+            completed it in 3 years.
+            <br />
+            <Link
+              href="https://www.isep.ipp.pt/"
+              pageColor={page.color}
+              target="_blank"
+            >
+              @ISEP
+            </Link>
+          </History>
+        </Container>
+      </Centered>
+    </MaxWidth>
   );
 };
