@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import FaGithub from "react-icons/lib/fa/github";
+import FaCodeFork from "react-icons/lib/fa/code-fork";
 import FaStarO from "react-icons/lib/fa/star-o";
 
 // I should really put this in a provider but I'm lazy af
@@ -74,7 +75,7 @@ const Stars = styled.div`
 export default ({ project }) => {
   return (
     <Container>
-      <FaGithub />
+      {project.fork ? <FaCodeFork /> : <FaGithub />}
       <Title href={project.html_url} target="_blank" theme={theme}>
         {project.name}
       </Title>
