@@ -21,7 +21,7 @@ import { fadeIn } from "../utils/animations";
 const Container = Centered.extend`
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 75vh;
   flex: auto;
   flex-direction: row;
   margin: 0 auto;
@@ -120,6 +120,7 @@ export default class Animation extends React.PureComponent {
                     <Buttons>
                       {pages.map(page => (
                         <Button
+                          key={`button-${page.name}`}
                           type="button"
                           onClick={this.selectPage.bind(this, page)}
                           color={page.color}
@@ -134,6 +135,7 @@ export default class Animation extends React.PureComponent {
             </Container>
           </Fullscreen>
         </Relative>
+
         {page.render(page)}
       </div>
     );

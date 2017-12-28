@@ -105,9 +105,7 @@ export default ({ page }) => {
                   src={meImg}
                   placeholder={meSmallImg}
                   transition="all 1s linear"
-                >
-                  {src => <img src={src} alt="an image" />}
-                </StyledProgressiveImage>
+                />
               </ColumnHeading>
             </Column>
           </Media>
