@@ -17,7 +17,7 @@ const Heading = styled.h2`
   margin-top: 6rem;
   margin-bottom: 1rem;
   text-transform: uppercase;
-  color: #1c2022;
+  color: white;
   text-shadow: 0 0 100px #3c4244;
   ${media.phone`margin-top: 3rem; margin-bottom: 0; `};
 `;
@@ -89,7 +89,7 @@ export default class MyProjects extends React.Component {
 
     return (
       <ErrorBoundary type="github">
-        <Background backgroundColor={page.color}>
+        <Centered horizontal>
           <MaxWidth width={1280}>
             <Centered horizontal>
               <Heading>These are my OSS projects on Github</Heading>
@@ -103,7 +103,7 @@ export default class MyProjects extends React.Component {
               </Projects>
             )}
           </MaxWidth>
-        </Background>
+        </Centered>
       </ErrorBoundary>
     );
   }

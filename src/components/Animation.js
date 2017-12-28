@@ -28,12 +28,13 @@ const Container = Centered.extend`
   max-width: 1280px;
   padding: 0px 1.0875rem 1.45rem;
   padding-top: 0;
+  ${media.phone`height: 35vh !important;`};
   ${media.tablet`
-  display: block;
-  flex-direction: column;
-  margin-top: 6rem;
-  margin-bottom: 8rem;
-  height: initial;
+    display: block;
+    flex-direction: column;
+    margin-top: 6rem;
+    margin-bottom: 8rem;
+    height: initial;
   `};
 `;
 
@@ -123,7 +124,7 @@ export default class Animation extends React.PureComponent {
                           key={`button-${page.name}`}
                           type="button"
                           onClick={this.selectPage.bind(this, page)}
-                          color={page.color}
+                          buttonColor={page.color}
                         >
                           {page.niceName}
                         </Button>

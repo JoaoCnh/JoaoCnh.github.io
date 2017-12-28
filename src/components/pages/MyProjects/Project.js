@@ -22,6 +22,7 @@ const Container = styled.div`
   -webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
   padding: 0.5rem;
+  background-color: white;
 
   ${media.tablet`
   width: calc(50% - 2rem);

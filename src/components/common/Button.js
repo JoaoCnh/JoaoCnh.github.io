@@ -8,8 +8,8 @@ const getGradient = color => css`linear-gradient(
 
 export default styled.button`
   position: relative;
-  background: ${({ color, secondary }) =>
-    secondary ? "" : getGradient(color)};
+  background: ${({ buttonColor, secondary }) =>
+    secondary ? "" : getGradient(buttonColor)};
   border: none;
   outline: none;
   padding: 0.75em 1.5em;
@@ -17,13 +17,13 @@ export default styled.button`
   border-radius: 4px;
   color: white;
   text-align: center;
-  box-shadow: 0 0 100px ${props => props.color.clearer(0.3)};
+  box-shadow: 0 0 100px ${props => props.buttonColor.clearer(0.3)};
   text-transform: uppercase;
-  ${({ color, secondary }) =>
+  ${({ buttonColor, secondary }) =>
     secondary &&
     css`
-      color: ${color};
-      text-shadow: 0 0 50px ${props => props.color.clearer(0.3)};
+      color: ${buttonColor};
+      text-shadow: 0 0 50px ${props => props.buttonColor.clearer(0.3)};
       box-shadow: none;
     `};
 `;
