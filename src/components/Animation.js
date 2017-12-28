@@ -4,6 +4,7 @@ import Media from "react-media";
 
 import Cubes from "./Cubes";
 import HomeTitle from "./HomeTitle";
+import Button from "./common/Button";
 import Background from "./Background";
 
 import Relative from "./common/Relative";
@@ -15,6 +16,7 @@ import * as pages from "../pages";
 import getScrollPos from "../utils/scroll";
 import media from "../utils/media";
 import theme from "../theme";
+import { fadeIn } from "../utils/animations";
 
 const Container = Centered.extend`
   position: relative;
@@ -35,6 +37,38 @@ const Container = Centered.extend`
   `};
 `;
 
+const Buttons = styled.div`
+  display: flex;
+  width: 550px;
+  ${fadeIn(0.5)};
+  font-size: 1.25rem;
+
+  button {
+    margin-right: 1rem;
+    ${media.tablet`
+    margin: 0;
+    text-align: center;
+    margin-right: 0;
+  `};
+  }
+
+  ${media.tablet`
+    margin: 0 1rem;
+    justify-content: space-around;
+    width: 100%;
+    text-align: center;
+  `};
+  ${media.phone`
+    margin: 0;
+    font-size: .875rem;
+    flex-wrap: wrap;
+    button {
+      width: inherit;
+      margin-bottom: 1rem;
+    }
+  `};
+`;
+
 export default class Animation extends React.PureComponent {
   state = {
     pages: Object.keys(pages)
@@ -44,20 +78,6 @@ export default class Animation extends React.PureComponent {
     pageIndex: 0,
     pageSelected: false,
     canvas: undefined
-  };
-
-  startTimer = () => {
-    this.timeout = setTimeout(() => {
-      if (!this.state.pageSelected) {
-        if (!window.scrolling && getScrollPos().y < window.innerHeight) {
-          this.setState({
-            pageIndex: (this.state.pageIndex + 1) % this.state.pages.length
-          });
-        }
-
-        this.startTimer();
-      }
-    }, 60000);
   };
 
   setCanvas = canvas => {
@@ -71,23 +91,16 @@ export default class Animation extends React.PureComponent {
     });
   };
 
-  componentDidMount() {
-    // this.startTimer();
-  }
-
-  componentWillUnmount() {
-    // clearTimeout(this.timeout);
-  }
-
   render() {
-    const page = this.state.pages[this.state.pageIndex];
+    const { pages, pageIndex, canvas } = this.state;
+    const page = pages[pageIndex];
 
     return (
       <div>
         <Relative>
           <Fullscreen>
             <Background
-              pageIndex={this.state.pageIndex}
+              pageIndex={pageIndex}
               page={page}
               setCanvas={this.setCanvas}
             />
@@ -95,11 +108,28 @@ export default class Animation extends React.PureComponent {
               <HomeTitle page={page} />
               <Media query="(min-width: 1280px)">
                 <Cubes
-                  canvas={this.state.canvas}
-                  pages={this.state.pages}
+                  canvas={canvas}
+                  pages={pages}
                   page={page}
                   setPage={this.selectPage}
                 />
+              </Media>
+              <Media query="(max-width: 1280px)">
+                <Centered>
+                  <MaxWidth width={1280}>
+                    <Buttons>
+                      {pages.map(page => (
+                        <Button
+                          type="button"
+                          onClick={this.selectPage.bind(this, page)}
+                          color={page.color}
+                        >
+                          {page.niceName}
+                        </Button>
+                      ))}
+                    </Buttons>
+                  </MaxWidth>
+                </Centered>
               </Media>
             </Container>
           </Fullscreen>

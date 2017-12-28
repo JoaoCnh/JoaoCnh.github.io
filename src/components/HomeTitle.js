@@ -48,38 +48,6 @@ const SubTitle = styled.h2`
   `};
 `;
 
-const Buttons = styled.div`
-  display: flex;
-  width: 550px;
-  ${fadeIn(0.5)};
-  font-size: 1.25rem;
-
-  a {
-    margin-right: 1rem;
-
-    ${media.tablet`
-      margin: 0;
-      text-align: center;
-      margin-right: 0;
-    `};
-  }
-
-  ${media.tablet`
-    margin: 0 1rem;
-    justify-content: space-around;
-    width: 100%;
-    text-align: center;
-  `};
-
-  ${media.phone`
-    font-size: .875rem;
-
-    a {
-      width: inherit;
-    }
-  `};
-`;
-
 const Primary = styled.div`
   display: inline-block;
   ${fadeIn(0.3)};
