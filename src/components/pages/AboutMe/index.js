@@ -75,61 +75,66 @@ export default ({ page }) => {
   return (
     <Centered horizontal>
       <MaxWidth width={1280}>
-        <Heading headingColor={page.color}>
-          Hello! My name is João Cunha
-        </Heading>
-        <SubHeading>
-          I'm a Full-Stack developer working{" "}
-          <Link
-            linkColor={page.color}
-            href="https://www.wiremaze.com/"
-            target="_blank"
-          >
-            @Wiremaze
-          </Link>{" "}
-          in Porto, Portugal.
-        </SubHeading>
-        <SubHeading>
-          I love <Text textColor={page.color}>Music</Text>,{" "}
-          <Text textColor={page.color}>Movies</Text>,{" "}
-          <Text textColor={page.color}>Sports</Text>,{" "}
-          <Text textColor={page.color}>Video-Games</Text> and{" "}
-          <Text textColor={page.color}>Programming</Text>.
-        </SubHeading>
-
         <Row>
-          <Media query="(min-width: 1280px)">
+          <Column>
+            <Heading headingColor={page.color}>
+              Hello! My name is João Cunha
+            </Heading>
+            <SubHeading>
+              I'm a Full-Stack developer working{" "}
+              <Link
+                linkColor={page.color}
+                href="https://www.wiremaze.com/"
+                target="_blank"
+              >
+                @Wiremaze
+              </Link>{" "}
+              in Porto, Portugal.
+            </SubHeading>
+            <SubHeading>
+              I love <Text textColor={page.color}>Music</Text>,{" "}
+              <Text textColor={page.color}>Movies</Text>,{" "}
+              <Text textColor={page.color}>Sports</Text>,{" "}
+              <Text textColor={page.color}>Video-Games</Text> and{" "}
+              <Text textColor={page.color}>Programming</Text>.
+            </SubHeading>
+          </Column>
+        </Row>
+
+        <Media query="(min-width: 1280px)">
+          <Row>
             <Column>
-              <ColumnHeading headingColor={page.color}>
+              <Heading headingColor={page.color}>
                 <StyledProgressiveImage
                   src={meImg}
                   placeholder={meSmallImg}
                   transition="all 1s linear"
                 />
-              </ColumnHeading>
+              </Heading>
             </Column>
-          </Media>
+          </Row>
+        </Media>
+
+        <Row>
           <Column>
-            <ColumnHeading headingColor={page.color}>
-              Welcome to my page
-            </ColumnHeading>
-            <ColumnSubHeading>
+            <Heading headingColor={page.color}>Welcome to my page</Heading>
+            <SubHeading>
               I hope you enjoy your stay and please feel free to get to know me
               more and connect with me in the following social networks
-            </ColumnSubHeading>
-            <ColumnSubHeading>
+            </SubHeading>
+            <SubHeading>
               Since a child I've been crazy about computers. Everything about
               them intrigued me! At first I was only obsessed with video-games
               but soon my world would be changed by discovering Programming in
               high-school.
-            </ColumnSubHeading>
-            <ColumnSubHeading>
+            </SubHeading>
+            <SubHeading>
               The turning point was that first "Hello World" program using
               Pascal that triggered my passion for programming! I decided I
               wanted to make a carreer out of it and here I am today, still
               loving the coding life and I don't see myself ever getting tired
               of it.
-            </ColumnSubHeading>
+            </SubHeading>
           </Column>
         </Row>
 
