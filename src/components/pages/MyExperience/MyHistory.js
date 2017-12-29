@@ -2,9 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import FaGraduationCap from "react-icons/lib/fa/graduation-cap";
 import FaBriefcase from "react-icons/lib/fa/briefcase";
+import MdInsertLink from "react-icons/lib/md/insert-link";
 
 import MaxWidth from "../../common/flex/MaxWidth";
 import Centered from "../../common/flex/Centered";
+import Button from "../../common/Button";
 
 import theme from "../../../theme";
 import media from "../../../utils/media";
@@ -19,30 +21,45 @@ const Container = styled.div`
   margin-top: 5rem;
 `;
 
-const History = ({
-  pageColor,
-  right,
-  title,
-  Icon,
-  children,
-  iconSize = 42
-}) => (
+const Column = styled.div`
+  flex: 1;
+  display: flex;
+  ${!media.phone`margin-right: 2rem;`};
+  flex-direction: column;
+`;
+
+const Row = styled.div`
+  display: flex;
+  position: relative;
+  ${!media.phone`margin-right: 2rem;`};
+  padding: 0 2rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+`;
+
+const History = ({ pageColor, title, Icon, Link, children }) => (
   <section>
-    <HistoryContainer pageColor={pageColor} right={right} iconSize={iconSize}>
-      <Icon />
-      <div>
-        <HistoryHeading pageColor={pageColor}>{title}</HistoryHeading>
-        <HistoryDescription pageColor={pageColor}>
-          {children}
-        </HistoryDescription>
-      </div>
+    <HistoryContainer pageColor={pageColor}>
+      <Column>
+        <Icon />
+
+        <div>
+          <HistoryHeading pageColor={pageColor}>{title}</HistoryHeading>
+          <HistoryDescription pageColor={pageColor}>
+            {children}
+          </HistoryDescription>
+        </div>
+
+        {Link}
+      </Column>
     </HistoryContainer>
   </section>
 );
 
 const HistoryContainer = styled.div`
   display: flex;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  align-items: center;
 
   ${media.phone`
     text-align: left;
@@ -60,6 +77,7 @@ const HistoryContainer = styled.div`
     height: 48px;
     color: white;
     text-shadow: 0 2px 2px ${({ pageColor }) => pageColor.clearer(0.9)};
+    align-self: center;
   }
 `;
 
@@ -70,6 +88,7 @@ const HistoryHeading = styled.h4`
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   text-shadow: 0 1px 0px ${({ pageColor }) => pageColor.clearer(0.9)};
+  text-align: center;
 `;
 
 const HistoryDescription = styled.p`
@@ -78,16 +97,13 @@ const HistoryDescription = styled.p`
   font-weight: 400;
   line-height: 1.4;
   text-shadow: 0 1px 0px ${({ pageColor }) => pageColor.clearer(0.9)};
+  text-align: center;
 `;
 
-const Link = styled.a`
-  color: white;
-  font-weight: 600;
+const Link = Button.withComponent("a").extend`
+  max-width: 25%;
   text-decoration: none;
-
-  &:hover {
-    color: ${({ pageColor }) => pageColor.lighten(0.2)()};
-  }
+  align-self: center;
 `;
 
 export default ({ page }) => {
@@ -98,35 +114,37 @@ export default ({ page }) => {
           <History
             pageColor={page.color}
             Icon={FaBriefcase}
+            Link={
+              <Link
+                href="https://www.wiremaze.com/"
+                buttonColor={page.color}
+                target="_blank"
+              >
+                Wiremaze
+              </Link>
+            }
             title="Started working at Wiremaze SA - 2014 to present"
           >
             Right after college I decided to throw myself straight into the work
             environment and start learning as much as I could. So far it's been
             amazing full of learning, knowledge and great people and friends.
-            <br />
-            <Link
-              href="https://www.wiremaze.com/"
-              pageColor={page.color}
-              target="_blank"
-            >
-              @Wiremaze
-            </Link>
           </History>
           <History
             pageColor={page.color}
             Icon={FaGraduationCap}
+            Link={
+              <Link
+                href="https://www.isep.ipp.pt/"
+                buttonColor={page.color}
+                target="_blank"
+              >
+                ISEP
+              </Link>
+            }
             title="Software Engineering Degree - ISEP - 2011 to 2014"
           >
             Started my university degree (Software Engineering) in 2011 and
             completed it in 3 years.
-            <br />
-            <Link
-              href="https://www.isep.ipp.pt/"
-              pageColor={page.color}
-              target="_blank"
-            >
-              @ISEP
-            </Link>
           </History>
         </Container>
       </Centered>
