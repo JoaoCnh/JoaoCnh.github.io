@@ -36,35 +36,6 @@ const Row = styled.div`
   flex-wrap: wrap;
 `;
 
-const ColumnHeading = styled.h3`
-  color: ${({ headingColor }) => headingColor()};
-  text-shadow: 0 0 50px ${({ headingColor }) => headingColor.clearer(0.6)};
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.0875rem;
-  text-rendering: optimizeLegibility;
-  font-size: 2.35824rem;
-  line-height: 1.1;
-`;
-
-const ColumnSubHeading = styled.p`
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.0875rem;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 1.8rem;
-`;
-
 const StyledProgressiveImage = styled(ProgressiveImage)`
   height: 500px;
   background-size: contain;
